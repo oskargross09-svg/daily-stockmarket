@@ -1,0 +1,78 @@
+name: YouTube-Upload
+
+on:
+  push:
+    branches: [main]
+    paths: ["videos/*.json"]
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Pfad zu einer videos/*.json-Datei"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: youtube-upload
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+
+      - name: Neue Aufträge finden
+        id: jobs
+        run: |
+          if [ -n "${{ github.event.inputs.job }}" ]; then J="${{ github.event.inputs.job }}";
+          else J=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'videos/*.json' | tr '\n' ' '); fi
+          echo "list=$J" >> "$GITHUB_OUTPUT"; echo "Aufträge: $J"
+
+      - uses: actions/setup-python@v5
+        if: steps.jobs.outputs.list != ''
+        with: { python-version: "3.12" }
+
+      - name: Hochladen
+        if: steps.jobs.outputs.list != ''
+        env:
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          pip install -q google-api-python-client google-auth
+          git fetch -q --depth 1 origin media
+          : > /tmp/log.txt
+          for J in ${{ steps.jobs.outputs.list }}; do
+            python3 - "$J" > /tmp/args.sh <<'PY'
+          import json, shlex, sys
+          j = json.load(open(sys.argv[1]))
+          a = ["--title", j["title"], "--description", j["description"], "--tags", ",".join(j.get("tags", [])),
+               "--privacy", j.get("privacy", "public"), "--synthetic"]
+          if j.get("publishAt"): a += ["--publish-at", j["publishAt"]]
+          print("RUN=" + shlex.quote(j["run"]))
+          print("VIDEO=" + shlex.quote(j["video"]))
+          print("ARGS=(" + " ".join(shlex.quote(x) for x in a) + ")")
+          PY
+            source /tmp/args.sh
+            echo "job: $J" >> /tmp/log.txt; echo "run: $RUN" >> /tmp/log.txt
+            git show "FETCH_HEAD:$VIDEO" > /tmp/video.mp4
+            set +e
+            python3 upload_youtube.py /tmp/video.mp4 "${ARGS[@]}" >> /tmp/log.txt 2>&1
+            echo "rc=$?" >> /tmp/log.txt
+            set -e
+          done
+          cat /tmp/log.txt
+
+      - name: Ergebnis in bot-logs schreiben
+        if: steps.jobs.outputs.list != ''
+        run: |
+          NAME=$(basename $(echo ${{ steps.jobs.outputs.list }} | cut -d' ' -f1) .json)
+          git config user.name daily-stockmarket-bot; git config user.email bot@users.noreply.github.com
+          if git fetch -q origin bot-logs; then git checkout -q -B bot-logs origin/bot-logs; else git checkout -q --orphan bot-logs; git rm -rqf .; fi
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name logs -exec rm -rf {} +
+          mkdir -p logs; cp /tmp/log.txt logs/$NAME.txt
+          git add logs; git commit -qm "log $NAME"; git push -q origin bot-logs
+          grep -q "rc=0" /tmp/log.txt

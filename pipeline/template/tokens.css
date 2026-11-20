@@ -1,0 +1,30 @@
+/* Daily Stockmarket — generated from tokens.json */
+:root, [data-theme="creme"] {
+  --paper: #faf7f0; --paper-2: #f0eadd; --paper-3: #e6dfd1; --line: #cfc6b5;
+  --ink: #1a1a1a; --ink-2: #3b3935; --ink-3: #5f5a51; --white: #ffffff;
+  --fur-black: #383838; --fur-black-shade: #262626; --fur-dark: #4b4b4b; --fur-dark-shade: #363636;
+  --fur-light: #c7c7c7; --fur-light-shade: #a8a8a8; --fur-white-shade: #e0e0e0;
+  --up: #22ff93; --up-shade: #14c46e; --up-ink: #00703f; --up-tint: #d6fbe8; --on-up: #1a1a1a;
+  --down: #f23645; --down-shade: #b8142a; --down-tint: #fde1e4; --on-down: #ffffff;
+  --flat: var(--ink-3);
+  --politik: #1c4a85; --politik-shade: #133563; --politik-tint: #e1e9f4; --on-politik: #ffffff;
+  --gold: #b5862e; --gold-hell: #ddae45; --gold-ink: #80601c; --gold-tint: #f3e8cf;
+  --alarm: var(--down); --alarm-ground: #141414; --alarm-on-ground: var(--down); --on-alarm: #ffffff;
+}
+:root {
+  --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 32px; --space-6: 48px; --space-8: 64px; --space-12: 96px;
+  --radius-s: 8px; --radius-m: 16px; --radius-l: 28px; --radius-pill: 999px;
+  --outline: 4px; --outline-ui: 3px; --hairline: 2px; --chart-line: 10px;
+  --safe-top: 192px; --safe-bottom: 460px; --safe-left: 64px; --safe-right: 176px;
+  --zone-ticker-y: 196px; --zone-badge-y: 276px; --zone-header-y: 364px; --zone-stage-y: 640px; --zone-caption-y: 1176px; --zone-source-y: 1368px;
+  --dur-fast: 160ms; --dur-in: 320ms; --dur-out: 240ms; --dur-stagger: 80ms; --dur-count: 900ms; --dur-chart: 1200ms;
+  --dur-transition: 400ms; --dur-pulse: 1000ms; --dur-blink: 120ms; --dur-breath: 4000ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1); --ease-alarm: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --font-cond: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.kennzahl { font-family: var(--font-cond); font-size: 200px; line-height: 190px; font-weight: 700; letter-spacing: -0.01em; }
+.kennzahl-m { font-family: var(--font-cond); font-size: 128px; line-height: 128px; font-weight: 700; letter-spacing: -0.01em; }
+.meta { font-family: var(--font-sans); font-size: 30px; line-height: 40px; font-weight: 500; }
+.label { font-family: var(--font-sans); font-size: 40px; line-height: 48px; font-weight: 600; }

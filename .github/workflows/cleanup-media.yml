@@ -1,0 +1,27 @@
+name: Media aufräumen
+
+# Jeden Montag: Videos im Branch `media`, die älter als 7 Tage sind, entfernen (Branch wird neu angelegt, damit das Repo klein bleibt).
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: media, fetch-depth: 1 }
+      - name: Alte Videos entfernen
+        run: |
+          CUT=$(date -u -d '7 days ago' +%Y-%m-%d)
+          mkdir -p /tmp/keep
+          for f in videos/*.mp4; do [ -e "$f" ] || continue; d=$(basename "$f" | cut -c1-10); [[ "$d" > "$CUT" || "$d" == "$CUT" ]] && cp "$f" /tmp/keep/; done
+          git config user.name daily-stockmarket-bot; git config user.email bot@users.noreply.github.com
+          git checkout -q --orphan media-new; git rm -rqf .
+          mkdir -p videos; cp /tmp/keep/*.mp4 videos/ 2>/dev/null || true
+          git add -A; git commit -qm "media aufgeräumt" --allow-empty
+          git push -qf origin media-new:media

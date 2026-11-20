@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components/bundle.css">
+<style>
+html,body{margin:0;padding:0;background:#faf7f0}
+.abs{position:absolute}
+#wipe,#linewipe{z-index:4}
+.ds-quote--compact{width:520px}
+.ds-chart--compact{width:520px}
+.ds-chart--compact .ds-bars{grid-template-columns:150px 1fr 110px;row-gap:30px}
+.ds-chart--compact .ds-bars__track{height:60px}
+.ds-statement--compact{width:520px;padding:64px 32px 30px}
+.ds-statement--compact .ds-statement__text{font-size:44px;line-height:56px}
+.center{position:absolute;left:0;width:1080px;display:flex;justify-content:center}
+.scene{position:absolute;inset:0}
+.kz-label{font:500 30px/40px var(--font-sans);color:var(--ink-3)}
+.kz-label b{font-weight:600;color:var(--ink-2)}
+#dachs-box{position:absolute}
+#dachs-box svg{width:100%;height:auto;display:block;overflow:visible}
+</style></head>
+<body><div class="ds-frame" id="frame">
+<div class="abs" style="left:0;top:196px;z-index:5"><div class="ds-ticker"><span class="ds-ticker__label">MÄRKTE</span><div class="ds-ticker__track" id="track"></div></div></div>
+<div class="abs" style="left:120px;top:276px;z-index:5" id="badge"></div>
+<div id="scenes"></div>
+<div id="dachs-box"><!--RIG--></div>
+<div class="abs" style="left:120px;top:1316px"><p class="ds-captions" id="cap"></p></div>
+<div class="abs" style="left:120px;top:1508px" id="source"></div>
+<div class="ds-wipe" id="wipe"></div>
+<div class="ds-linewipe" id="linewipe"></div>
+</div>
+<script>
+const STORY=/*STORY*/null, TL=/*TL*/null;
+const ICON={up:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 22 13h-6.2v8.5H8.2V13H2z" fill="currentColor"/></svg>',
+ down:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5 22 11h-6.2V2.5H8.2V11H2z" fill="currentColor"/></svg>',
+ flat:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 12 11 2v6.2H2.5v7.6H11V22z" fill="currentColor"/></svg>',
+ politik:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7v2.5h20V7zM4 11h3v7H4zm6.5 0h3v7h-3zM17 11h3v7h-3zM2 19.5h20V22H2z" fill="currentColor"/></svg>'};
+const TAGNAME={up:'BÖRSE',down:'BÖRSE',flat:'BÖRSE',politik:'POLITIK'};
+const BELL='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a6.5 6.5 0 0 0-6.5 6.5v4.3L3.5 16.8V18h17v-1.2l-2-3.5V9A6.5 6.5 0 0 0 12 2.5zm-2.6 17a2.6 2.6 0 0 0 5.2 0z" fill="currentColor"/></svg>';
+const EDI={'06':['Morgenausgabe','<path d="M5 22h22M9 22a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 5v5M7 10l3 3M25 10l-3 3M16 27v-2" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>'],
+ '12':['Mittagsausgabe','<circle cx="16" cy="16" r="6" fill="currentColor"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6.8 6.8l2.8 2.8M22.4 22.4l2.8 2.8M6.8 25.2l2.8-2.8M22.4 9.6l2.8-2.8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>'],
+ '18':['Abendausgabe','<path d="M5 22h22M9 22a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 15v-8M12.5 10.5 16 7l3.5 3.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 16 11)"/><path d="M8 27h16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>'],
+ '24':['Nachtausgabe','<path d="M20.5 4.5A11.5 11.5 0 1 0 27.5 19 9 9 0 0 1 20.5 4.5z" fill="currentColor"/>']};
+const QMARK='<svg class="ds-statement__mark" viewBox="0 0 104 88" aria-hidden="true"><path d="M8 84V52C8 26 20 10 44 4l6 12C36 22 30 32 30 44h16v40zM58 84V52c0-26 12-42 36-48l6 12C86 22 80 32 80 44h16v40z" fill="#b5862e" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round"/></svg>';
+const NB=' ', MINUS='−';
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const fmtText=s=>esc(s).replace(/(\d) (\d)/g,'$1'+NB+'$2').replace(/ %/g,NB+'%').replace(/\*(.+?)\*/g,'<em>$1</em>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+const fmtLabel=s=>esc(s).replace(/(\d) (\d)/g,'$1'+NB+'$2').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+function dsNum(n,dec){return new Intl.NumberFormat('de-DE',{minimumFractionDigits:dec,maximumFractionDigits:dec}).format(Math.abs(n)).replace(/\./g,NB);}
+const sg=v=>v<0?MINUS:v>0?'+':'±';
+const dirOf=v=>v>0?'up':v<0?'down':'flat';
+const ARW={up:'▲',down:'▼',flat:'▶'};
+
+/* ---------- Ticker + Badge */
+function tickHTML(){return STORY.ticker.map(([n,v,c])=>{const d=dirOf(c);
+  return `<span class="ds-ticker__item ds-dir--${d}"><b>${esc(n)}</b>${v?' '+fmtLabel(v):''} <span class="ds-ticker__chg">${ARW[d]} ${sg(c)}${dsNum(c,1)}${NB}%</span></span><span class="ds-ticker__sep"></span>`}).join('');}
+document.getElementById('track').innerHTML=tickHTML()+tickHTML()+tickHTML();
+const ed=EDI[STORY.edition];
+document.getElementById('badge').innerHTML=`<div class="ds-edition"><span class="ds-edition__time"><svg viewBox="0 0 32 32" aria-hidden="true">${ed[1]}</svg>${STORY.edition}:00</span><span class="ds-edition__label">${ed[0]}</span><span class="ds-edition__date">${esc(STORY.date_label)}</span></div>`;
+
+/* ---------- Szenen bauen */
+function topic(dir,h){const s=h.replace(/\*/g,'').length>44?' ds-headline--s':'';
+  return `<div class="ds-topic ds-dir--${dir}"><span class="ds-tag ds-dir--${dir}" data-el>${ICON[dir]}${TAGNAME[dir]}</span><h1 class="ds-headline${s}" data-el>${fmtText(h)}</h1></div>`;}
+function objHTML(o,id){
+ if(o.kind==='quote'){const d=dirOf(o.pct);return `<div class="abs" style="left:120px;top:690px" id="${id}"><div class="ds-quote ds-quote--compact ds-dir--${d}"><div class="ds-quote__name">${esc(o.name)}</div><div class="ds-quote__icon">${ICON[d]}</div><div class="ds-quote__sub">${esc(o.sub||'')}</div><div class="ds-quote__value" data-v></div><div class="ds-quote__row"><span class="ds-chip">${ICON[d]}<span data-p></span></span><span class="ds-quote__abs" data-a></span></div></div></div>`;}
+ if(o.kind==='bars'){const max=Math.max(...o.rows.map(r=>Math.abs(r[1])))*1.1;
+  return `<div class="abs" style="left:120px;top:690px" id="${id}"><div class="ds-chart ds-chart--compact"><div class="ds-chart__head"><span class="ds-chart__title">${esc(o.title)}</span><span class="ds-chart__meta">in %</span></div><div class="ds-bars">`+
+  o.rows.map(([n,v])=>{const d=dirOf(v);const w=Math.abs(v)/max*50;return `<span class="ds-bars__label">${esc(n)}</span><div class="ds-bars__track ds-dir--${d}"><div class="ds-bars__bar ${v<0?'ds-bars__bar--neg':''}" style="${v<0?'right':'left'}:50%;width:${w}%"></div></div><span class="ds-bars__val ds-dir--${d}">${sg(v)}${dsNum(v,1)}${NB}%</span>`}).join('')+`</div></div></div>`;}
+ if(o.kind==='kennzahl'){const d=o.color||'ink';const col=d==='ink'?'var(--ink)':(d==='up'?'var(--up-ink)':'var(--'+d+')');
+  return `<div class="abs" style="left:120px;top:700px" id="${id}"><div class="kennzahl" style="color:${col}" data-v></div><div class="kz-label" style="width:${o.labelWidth||560}px">${fmtLabel(o.label||'')}</div></div>`;}
+ if(o.kind==='statement'){return `<div class="abs" style="left:120px;top:720px" id="${id}"><div class="ds-statement ds-statement--compact">${QMARK}<p class="ds-statement__text">${fmtLabel(o.quote)}</p><div class="ds-statement__who"><span class="ds-statement__name">${esc(o.who)}</span><span class="ds-statement__role">${esc(o.role||'')}</span></div></div></div>`;}
+ return '';}
+const S=document.getElementById('scenes');
+TL.scenes.forEach((sc,si)=>{let h=`<div class="scene" id="sc${si}">`;
+ if(sc.type==='outro'){h+=`<img class="abs" src="assets/logo-horizontal.svg" style="left:160px;top:388px;width:760px" id="logo${si}">
+  <div class="center" style="top:1050px" id="next${si}"><span class="ds-next">Nächstes Update um <b>${esc(sc.next)}</b></span></div>
+  <div class="center" style="top:1150px" id="sub${si}"><span class="ds-subscribe">${BELL}Abonnieren – 4× täglich informiert</span></div>`;}
+ else{h+=`<div class="abs" style="left:120px;top:364px">${topic(sc.dir,sc.headline)}</div>`;sc.objects.forEach((o,oi)=>{h+=objHTML(o,`o${si}_${oi}`);});}
+ S.innerHTML+=h+'</div>';});
+
+/* ---------- Easing */
+const bez=(x1,y1,x2,y2)=>t=>{if(t<=0)return 0;if(t>=1)return 1;let lo=0,hi=1,u=t;for(let i=0;i<30;i++){u=(lo+hi)/2;const x=3*(1-u)*(1-u)*u*x1+3*(1-u)*u*u*x2+u*u*u;if(x<t)lo=u;else hi=u;}return 3*(1-u)*(1-u)*u*y1+3*(1-u)*u*u*y2+u*u*u;};
+const eOut=bez(.22,1,.36,1), eIn=bez(.55,0,1,.45), eIO=bez(.65,0,.35,1);
+const quart=t=>1-Math.pow(1-Math.min(1,Math.max(0,t)),4);
+const cl=x=>Math.min(1,Math.max(0,x));
+function inUp(el,t,at,dy=40){const p=eOut(cl((t-at)/.32));el.style.opacity=p;el.style.transform=`translateY(${(1-p)*dy}px)`;}
+function objVis(el,t,o){ // Einblenden, ggf. Slide-in, Slide-out
+ if(t<o.appear){el.style.opacity=0;return;}
+ let op,ty;
+ if(o.slideIn){const p=eOut(cl((t-o.appear)/.32));op=p;ty=(1-p)*80;}else{const p=eOut(cl((t-o.appear)/.32));op=p;ty=(1-p)*40;}
+ if(o.out!=null&&t>=o.out){const q=eIn(cl((t-o.out)/.24));op*=1-q;ty=-80*q;}
+ el.style.opacity=op;el.style.transform=`translateY(${ty}px)`;}
+function setObj(el,o,t){
+ if(o.kind==='quote'){const k=quart((t-o.countAt)/.9);
+  el.querySelector('[data-v]').textContent=dsNum(o.from+(o.to-o.from)*k,o.dec)+(o.unit?NB+o.unit:'');
+  el.querySelector('[data-p]').textContent=sg(o.pct)+dsNum(o.pct*k,o.pctDec??1)+NB+'%';
+  el.querySelector('[data-a]').textContent=o.abs!=null?sg(o.abs)+dsNum(o.abs*k,o.absDec??o.dec)+NB+(o.absUnit||'Pkt.'):'';}
+ if(o.kind==='bars'){el.querySelectorAll('.ds-bars__bar').forEach((b,i)=>{b.style.transform=`scaleX(${eOut(cl((t-o.countAt-i*.08)/1.2))})`;});}
+ if(o.kind==='kennzahl'){const k=quart((t-o.countAt)/.9);
+  el.querySelector('[data-v]').textContent=(o.sign?sg(o.value):'')+dsNum(o.value*k,o.dec)+(o.unit?NB+o.unit.replace(/ /g,NB):'');}}
+
+/* ---------- Dachs */
+const D=document.getElementById('dachs-box');
+const LAY={mod:{w:460,x:500,y:882},data:{w:360,x:600,y:973},outro:{w:440,x:320,y:610}};
+const MUND=['geschlossen','leicht','weit','o','mbp','laecheln','besorgt'];
+const show=(pre,list,on)=>list.forEach(n=>{const e=document.getElementById(pre+n);if(e)e.style.display=(n===on?'':'none');});
+show('krawatte-',['gruen','rot','blau','neutral'],{up:'gruen',down:'rot',flat:'neutral',politik:'blau'}[STORY.mood]||'neutral');
+const L=TL.lines, NF=TL.rms.length, MOUTH=new Array(NF);
+{let cur=null,hold=0;for(let f=0;f<NF;f++){const t=f/TL.fps;const sp=L.some(l=>t>=l.start-.03&&t<=l.end+.03);const r=TL.rms[f];
+ let want=!sp||r<.03?'rest':r<.06?'mbp':r<.16?'leicht':'weit';if(cur!==null&&want!==cur&&hold<2)want=cur;if(want===cur)hold++;else{cur=want;hold=1;}MOUTH[f]=cur;}}
+const BLINK=[];{let s=7,t=1.6;const rnd=()=>{s=(s*16807)%2147483647;return s/2147483647;};while(t<TL.total){BLINK.push(t);if(rnd()<.2)BLINK.push(t+.32);t+=2.5+rnd()*3.5;}}
+function sceneIdx(t){let s=0;TL.scenes.forEach((sc,i)=>{if(t>=sc.swap)s=i;});return s;}
+
+/* ---------- Captions */
+const CHUNKS=[];L.forEach(l=>{const words=l.cap.replace(/(\d) (\d)/g,'$1'+NB+'$2').split(' ');const wts=words.map(w=>w.replace(/[^\wäöüÄÖÜ&×]/g,'').length+1.5);
+ const tot=wts.reduce((a,b)=>a+b,0);let acc=0;const tw=words.map((w,i)=>{const s=l.start+(l.end-l.start)*acc/tot;acc+=wts[i];return {w,s};});
+ let ch=[],len=0;tw.forEach(o=>{if(len+o.w.length>38&&ch.length){CHUNKS.push({line:l,words:ch});ch=[];len=0;}ch.push(o);len+=o.w.length+1;});if(ch.length)CHUNKS.push({line:l,words:ch});});
+function renderCap(t,si){const cap=document.getElementById('cap');let c=null;
+ for(let i=0;i<CHUNKS.length;i++){if(CHUNKS[i].words[0].s<=t+.05)c=i;}
+ if(c===null||CHUNKS[c].line.scene!==si){cap.innerHTML='';return;}
+ const ch=CHUNKS[c];const d=TL.scenes[si].dir||'flat';cap.className='ds-captions ds-dir--'+d;
+ let nowI=-1;ch.words.forEach((o,i)=>{if(o.s<=t)nowI=i;});if(t>ch.line.end+.15)nowI=ch.words.length;
+ cap.innerHTML=ch.words.map((o,i)=>{const num=/\d/.test(o.w)?' is-num':'';const st=i<nowI?'is-done':i===nowI?'is-now':'is-next';return `<span class="${st}${num}">${esc(o.w)}</span>`}).join(' ');}
+
+/* ---------- Frame */
+let trackW=null;
+window.setTime=function(t){
+ const si=sceneIdx(t), sc=TL.scenes[si], sw=sc.swap;
+ TL.scenes.forEach((_,i)=>{document.getElementById('sc'+i).style.display=(i===si?'':'none');});
+ const tr=document.getElementById('track');if(trackW===null)trackW=tr.scrollWidth/3;
+ tr.style.transform=`translateX(${-((t/30)*trackW)%trackW}px)`;
+ if(sc.type==='outro'){inUp(document.getElementById('logo'+si),t,sw+.05);inUp(document.getElementById('next'+si),t,sc.nextAt);inUp(document.getElementById('sub'+si),t,sc.subAt);}
+ else{document.querySelectorAll('#sc'+si+' [data-el]').forEach((e,i)=>inUp(e,t,sc.headerAt+i*.08));
+  sc.objects.forEach((o,oi)=>{const el=document.getElementById(`o${si}_${oi}`);objVis(el,t,o);setObj(el,o,t);});}
+ const so=document.getElementById('source');
+ so.innerHTML=sc.type==='outro'?'<div class="ds-source"><span>06:00 · 12:00 · 18:00 · 24:00 Uhr</span></div>':
+  `<div class="ds-source"><span>Quelle: ${fmtLabel(sc.source||'')}</span><span class="ds-disclaimer"><i>i</i>Keine Anlageberatung</span></div>`;
+ inUp(so,t,sw+.3,0);
+ renderCap(t,si);
+ const P=sc.pose, Ly=LAY[sc.layout];D.style.left=Ly.x+'px';D.style.top=Ly.y+'px';D.style.width=Ly.w+'px';
+ D.style.opacity=eOut(cl((t-Math.max(.2,sw+.12))/.32));
+ show('arm-',['erklaeren','zeigen','winken','kinn'],P.arm);show('brauen-',['neutral','froh','besorgt','alarm'],P.brauen);
+ const f=Math.min(NF-1,Math.round(t*TL.fps));let m=MOUTH[f];if(m==='rest')m=P.rest;show('mund-',MUND,m);
+ let eye='offen';for(const b of BLINK){const k=Math.floor((t-b)/.04);if(k>=0&&k<3)eye=k===1?'zu':'halb';}show('augen-',['offen','halb','zu'],eye);
+ const br=1+.006*(.5-.5*Math.cos(2*Math.PI*t/4));document.getElementById('ebene-koerper').setAttribute('transform',`translate(400 800) scale(1 ${br}) translate(-400 -800)`);
+ const r=TL.rms[f]||0;document.getElementById('ebene-kopf').setAttribute('transform',`rotate(${1.2*cl((r-.35)/.5)} 400 560)`);
+ const wp=document.getElementById('wipe'),lw=document.getElementById('linewipe');wp.style.transform='translateX(-101%)';lw.style.transform='scaleX(0)';
+ TL.scenes.forEach((s,i)=>{if(i===0)return;const p=(t-(s.swap-.4))/.8;if(p<0||p>1)return;
+  const c=s.type==='outro'||!s.dir||s.dir==='flat'?'var(--ink)':`var(--${s.dir})`;
+  if(s.transition==='line'){lw.style.setProperty('--c',c);if(p<.5){lw.style.transformOrigin='left';lw.style.transform=`scaleX(${eIO(p/.5)})`;}else{lw.style.transformOrigin='right';lw.style.transform=`scaleX(${1-eIO((p-.5)/.5)})`;}}
+  else{wp.style.setProperty('--c',c);let x;if(p<.45)x=-101+101*eIO(p/.45);else if(p<.55)x=0;else x=101*eIO((p-.55)/.45);wp.style.transform=`translateX(${x}%)`;}});
+};
+window.READY=document.fonts.ready.then(()=>true);
+</script></body></html>

@@ -28,6 +28,8 @@ def main() -> None:
     p.add_argument("--tags", default="", help="Komma-getrennt")
     p.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"])
     p.add_argument("--category", default="25", help="25 = News & Politik")
+    p.add_argument("--publish-at", default="",
+                   help="ISO-Zeit (UTC), z. B. 2026-11-20T17:00:00Z – Video bleibt bis dahin privat")
     p.add_argument("--synthetic", action="store_true",
                    help="Inhalt als KI-generiert/verändert kennzeichnen")
     args = p.parse_args()
@@ -52,11 +54,14 @@ def main() -> None:
             "categoryId": args.category,
         },
         "status": {
-            "privacyStatus": args.privacy,
+            "privacyStatus": "private" if args.publish_at else args.privacy,
             "selfDeclaredMadeForKids": False,
             "containsSyntheticMedia": args.synthetic,
         },
     }
+
+    if args.publish_at:
+        body["status"]["publishAt"] = args.publish_at
 
     media = MediaFileUpload(args.video, chunksize=8 * 1024 * 1024, resumable=True)
     request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
@@ -69,6 +74,9 @@ def main() -> None:
 
     print(f"Fertig: https://youtu.be/{response['id']}")
     print(f"Status: {response['status']['privacyStatus']}")
+    print(f"VIDEO_ID={response['id']}")
+    if args.publish_at:
+        print(f"Veröffentlichung geplant: {response['status'].get('publishAt')}")
 
 
 if __name__ == "__main__":
