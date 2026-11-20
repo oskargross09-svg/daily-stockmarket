@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-20",
+  "edition": "18",
+  "mood": "down",
+  "ticker": [
+    ["SMI", "14 556,2", -1.1],
+    ["DAX", "24 899", -2.2],
+    ["Nasdaq", "", -1.3],
+    ["Dow", "", -0.1],
+    ["EUR/CHF", "0,9220", -0.4],
+    ["USD/CHF", "0,8384", -0.7],
+    ["Gold", "3 556 $", -2.0],
+    ["Brent", "90,50 $", -1.6]
+  ],
+  "say": {"Nasdaq": "Nasdäk", "Dow Jones": "Dau Dschouns", "SMI": "S M I", "DAX": "Dax", "KI": "K I", "ABB": "A B B", "UBS": "U B S", "AMD": "A M D"},
+  "scenes": [
+    {
+      "type": "hook", "dir": "down",
+      "headline": "DAX fällt den *sechsten Tag* in Folge",
+      "source": "**Xetra** · Stand Fr, 14:05 Uhr",
+      "lines": [
+        {"cap": "Guten Abend. Der Tech-Ausverkauf geht weiter, der DAX fällt den sechsten Tag in Folge.",
+         "tts": "Guten Abend. Der Tech-Ausverkauf geht weiter, der DAX fällt den sechsten Tag in Folge."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -2.2, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**DAX** · Fr, 20.11., Nachmittag"}
+      ]
+    },
+    {
+      "type": "news", "dir": "down",
+      "headline": "SMI verliert *1,1 %*, ABB und UBS schwach",
+      "source": "**SIX** · Stand Fr, 16:38 Uhr",
+      "lines": [
+        {"cap": "In Zürich verliert der SMI am späten Nachmittag 1,1 Prozent auf 14 556 Punkte.",
+         "tts": "In Zürich verliert der SMI am späten Nachmittag eins Komma eins Prozent, auf vierzehntausendfünfhundertsechsundfünfzig Punkte."},
+        {"cap": "Am stärksten fallen ABB mit minus 3,9 und UBS mit minus 2,7 Prozent.",
+         "tts": "Am stärksten fallen ABB mit minus drei Komma neun, und UBS mit minus zwei Komma sieben Prozent."},
+        {"cap": "Nestlé hält mit plus 1,2 Prozent dagegen.",
+         "tts": "Nestlé hält mit plus eins Komma zwei Prozent dagegen."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "SMI", "sub": "Swiss Market Index", "from": 14721.84, "to": 14556.18, "dec": 1, "pct": -1.1, "abs": -165.66, "countDelay": 1.0},
+        {"kind": "bars", "at": 1, "title": "SMI-Titel", "rows": [["ABB", -3.93], ["UBS", -2.71], ["Nestlé", 1.16]]}
+      ]
+    },
+    {
+      "type": "news", "dir": "down",
+      "headline": "DAX rutscht unter *25 000* Punkte",
+      "source": "**Xetra** · Stand Fr, 14:05 Uhr",
+      "lines": [
+        {"cap": "In Frankfurt fällt der DAX unter 25 000 Punkte, am Nachmittag um 2,2 Prozent.",
+         "tts": "In Frankfurt fällt der DAX unter fünfundzwanzigtausend Punkte, am Nachmittag um zwei Komma zwei Prozent."},
+        {"cap": "Unter Druck stehen vor allem Infineon und Siemens Energy.",
+         "tts": "Unter Druck stehen vor allem Infineon und Siemens Energy."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "DAX", "sub": "Xetra", "from": 25463.81, "to": 24899.0, "dec": 1, "pct": -2.2, "abs": -564.81, "countDelay": 1.0}
+      ]
+    },
+    {
+      "type": "news", "dir": "down",
+      "headline": "Wall Street startet *uneinheitlich*",
+      "source": "**NYSE, Nasdaq** · Eröffnung Fr, 15:34 Uhr",
+      "lines": [
+        {"cap": "Die Wall Street startet uneinheitlich, die Nasdaq fällt zur Eröffnung 1,3 Prozent.",
+         "tts": "Die Wall Street startet uneinheitlich, die Nasdaq fällt zur Eröffnung eins Komma drei Prozent."},
+        {"cap": "Der Dow Jones dreht danach ins Plus, Chipwerte wie Nvidia und AMD bleiben unter Druck.",
+         "tts": "Der Dow Jones dreht danach ins Plus, Chipwerte wie Nvidia und AMD bleiben unter Druck."}
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "Eröffnung", "rows": [["Dow", -0.1], ["S&P 500", -0.5], ["Nasdaq", -1.3]]}
+      ]
+    },
+    {
+      "type": "fazit", "dir": "down",
+      "headline": "*KI-Zweifel* drücken Europas Börsen",
+      "source": "**SIX, Xetra** · Stand Fr, 16:38 Uhr",
+      "lines": [
+        {"cap": "Fazit: Zweifel an den KI-Investitionen schicken Europas Börsen mit Verlusten ins Wochenende.",
+         "tts": "Fazit: Zweifel an den K I Investitionen schicken Europas Börsen mit Verlusten ins Wochenende."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 6, "dec": 0, "unit": "Tage", "color": "down", "label": "**DAX** · Verlusttage in Folge"}
+      ]
+    }
+  ],
+  "title": "Tech-Ausverkauf: DAX fällt den sechsten Tag in Folge | Börse am Abend 20.11.",
+  "description": "Der DAX rutscht unter 25 000 Punkte und fällt den sechsten Tag in Folge, der SMI verliert 1,1 Prozent, belastet von ABB und UBS. An der Wall Street gibt die Nasdaq zur Eröffnung nach, weil Zweifel an den KI-Investitionen die Chipwerte belasten.",
+  "tags": ["Börse", "Aktien", "SMI", "DAX", "Wall Street", "Nasdaq", "UBS"]
+}
