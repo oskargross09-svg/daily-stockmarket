@@ -1,0 +1,7 @@
+job: videos/2026-11-20_18.json
+run: 20261120T164315
+Fertig: https://youtu.be/iTB7dOZ8laI
+Status: private
+VIDEO_ID=iTB7dOZ8laI
+Veröffentlichung geplant: 2026-11-20T17:00:00Z
+rc=0
