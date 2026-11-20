@@ -1,0 +1,242 @@
+{
+  "date": "2026-11-20",
+  "edition": "24",
+  "mood": "down",
+  "ticker": [
+    [
+      "Dow",
+      "48 147,3",
+      -1.9
+    ],
+    [
+      "S&P 500",
+      "6 910,4",
+      -3.7
+    ],
+    [
+      "Nasdaq",
+      "22 617,7",
+      -5.3
+    ],
+    [
+      "EUR/CHF",
+      "0,9201",
+      -0.6
+    ],
+    [
+      "USD/CHF",
+      "0,8387",
+      -0.6
+    ],
+    [
+      "Gold",
+      "3 527,46 $",
+      -2.7
+    ],
+    [
+      "Brent",
+      "92,38 $",
+      0.4
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow Jones": "Dau Dschouns",
+    "KI": "K I",
+    "Anthropic": "Änthropik",
+    "Nvidia": "Enviddia",
+    "Sandisk": "Sändisk",
+    "Micron": "Maikron",
+    "Fed": "Fedd"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "Nasdaq fällt um *5,3 %*",
+      "source": "**Nasdaq** · Schluss Fr, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Abend. Der KI-Ausverkauf erfasst die ganze Wall Street, die Nasdaq fällt 5,3 Prozent.",
+          "tts": "Guten Abend. Der K I Ausverkauf erfasst die ganze Wall Street, die Nasdaq fällt fünf Komma drei Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -5.3,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**Nasdaq Composite** · Schluss Fr, 20.11."
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "S&P 500 und Dow *in der Korrektur*",
+      "source": "**NYSE, Nasdaq** · Schluss Fr, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Die Nasdaq schliesst bei 22 618 Punkten, im Minus für das Jahr.",
+          "tts": "Die Nasdaq schliesst bei zweiundzwanzigtausendsechshundertachtzehn Punkten, im Minus für das Jahr."
+        },
+        {
+          "cap": "Der S&P 500 verliert 3,7 Prozent, der Dow Jones 1,9 Prozent.",
+          "tts": "Der S und P fünfhundert verliert drei Komma sieben Prozent, der Dow Jones eins Komma neun Prozent."
+        },
+        {
+          "cap": "Beide liegen mehr als zehn Prozent unter dem Rekord.",
+          "tts": "Beide liegen mehr als zehn Prozent unter dem Rekord."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "Nasdaq",
+          "sub": "Nasdaq Composite",
+          "from": 23879.2,
+          "to": 22617.73,
+          "dec": 1,
+          "pct": -5.3,
+          "abs": -1261.47,
+          "countDelay": 1.0
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Schluss Freitag",
+          "rows": [
+            [
+              "Nasdaq",
+              -5.28
+            ],
+            [
+              "S&P 500",
+              -3.7
+            ],
+            [
+              "Dow",
+              -1.93
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Nvidia verliert *14 %*",
+      "source": "**Nasdaq** · Schluss Fr, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Nvidia fällt um 14 Prozent auf 125,84 Dollar.",
+          "tts": "Nvidia fällt um vierzehn Prozent, auf hundertfünfundzwanzig Dollar vierundachtzig."
+        },
+        {
+          "cap": "Auch Sandisk und Micron verlieren zweistellig.",
+          "tts": "Auch Sandisk und Micron verlieren zweistellig."
+        },
+        {
+          "cap": "Anthropic fällt am zweiten Handelstag auf 88,91 Dollar.",
+          "tts": "Anthropic fällt am zweiten Handelstag auf achtundachtzig Dollar einundneunzig."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "Chipwerte",
+          "rows": [
+            [
+              "Sandisk",
+              -16.05
+            ],
+            [
+              "Nvidia",
+              -14.01
+            ],
+            [
+              "Micron",
+              -13.89
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Schwächste Woche seit *April 2025*",
+      "source": "**NYSE, Nasdaq** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {
+          "cap": "Auf Wochensicht verliert der Nasdaq 100 gut 10 Prozent.",
+          "tts": "Auf Wochensicht verliert der Nasdaq hundert gut zehn Prozent."
+        },
+        {
+          "cap": "Fed-Gouverneurin Lisa Cook hält den Leitzins für zu tief, die Märkte erwarten eine Zinserhöhung im Dezember.",
+          "tts": "Fed-Gouverneurin Lisa Cook hält den Leitzins für zu tief, die Märkte erwarten eine Zinserhöhung im Dezember."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "Wochenbilanz",
+          "rows": [
+            [
+              "Nasdaq 100",
+              -10.43
+            ],
+            [
+              "S&P 500",
+              -8.61
+            ],
+            [
+              "Dow",
+              -8.02
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "down",
+      "headline": "*KI-Zweifel* und Zinssorgen belasten",
+      "source": "**NYSE** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {
+          "cap": "Fazit: KI-Zweifel und Zinssorgen drücken die Wall Street in die Korrektur.",
+          "tts": "Fazit: K I Zweifel und Zinssorgen drücken die Wall Street in die Korrektur."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -8.6,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**S&P 500** · Wochenbilanz"
+        }
+      ]
+    }
+  ],
+  "title": "KI-Ausverkauf: Nasdaq −5,3 %, S&P 500 und Dow in der Korrektur | Börse in der Nacht 20.11.",
+  "description": "Die Nasdaq fällt am Freitag 5,3 Prozent, der S&P 500 und der Dow Jones liegen mehr als zehn Prozent unter ihrem Rekord. Nvidia verliert 14 Prozent, dazu kommen Sorgen vor einer Zinserhöhung der US-Notenbank im Dezember.",
+  "tags": [
+    "Börse",
+    "Wall Street",
+    "Nasdaq",
+    "S&P 500",
+    "Dow Jones",
+    "Nvidia",
+    "Fed"
+  ]
+}
