@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-21",
+  "edition": "06",
+  "mood": "down",
+  "ticker": [
+    ["SMI", "14 572,1", -1.0],
+    ["DAX", "24 802,8", -2.6],
+    ["Dow", "48 147,3", -1.9],
+    ["S&P 500", "6 910,4", -3.7],
+    ["EUR/CHF", "0,9201", -0.6],
+    ["USD/CHF", "0,8387", -0.6],
+    ["Gold", "3 527,46 $", -2.7],
+    ["Brent", "92,38 $", 0.4]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow Jones": "Dau Dschouns",
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "KI": "K I",
+    "Fed": "Fedd",
+    "PCE": "P C E",
+    "CME FedWatch": "C M E Fedd-Wotsch",
+    "Thanksgiving": "Thänksgiwing"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "DAX mit *schwächster Woche* seit über einem Jahr",
+      "source": "**Xetra** · Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {"cap": "Guten Morgen. Der DAX beendet die schwächste Woche seit mehr als einem Jahr."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -2.6, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**DAX** · Schluss Fr, 20.11."}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "DAX und SMI im *Wochenminus*",
+      "source": "**Xetra, SIX** · Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {"cap": "Am Freitag fällt der DAX 2,6 Prozent auf 24 803 Punkte.",
+         "tts": "Am Freitag fällt der DAX zwei Komma sechs Prozent, auf vierundzwanzigtausendachthundertdrei Punkte."},
+        {"cap": "Es ist der sechste Verlusttag in Folge, auf Wochensicht ein Minus von mehr als sieben Prozent.",
+         "tts": "Es ist der sechste Verlusttag in Folge, auf Wochensicht ein Minus von mehr als sieben Prozent."},
+        {"cap": "Der SMI schliesst 1,0 Prozent tiefer bei 14 572 Punkten.",
+         "tts": "Der SMI schliesst ein Prozent tiefer, bei vierzehntausendfünfhundertzweiundsiebzig Punkten."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "DAX", "sub": "Deutscher Aktienindex", "from": 25463.81, "to": 24802.78, "dec": 1, "pct": -2.6, "abs": -661.03},
+        {"kind": "quote", "at": 2, "name": "SMI", "sub": "Swiss Market Index", "from": 14721.84, "to": 14572.14, "dec": 1, "pct": -1.0, "abs": -149.70}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Neue Woche: *Inflation* und Thanksgiving",
+      "source": "**CME FedWatch, Dow Jones** · Stand Fr",
+      "lines": [
+        {"cap": "Am Mittwoch folgen in den USA die PCE-Inflation und das Wachstum im dritten Quartal."},
+        {"cap": "Laut CME FedWatch liegt die Wahrscheinlichkeit einer Fed-Zinserhöhung im Dezember bei 99,2 Prozent.",
+         "tts": "Laut CME FedWatch liegt die Wahrscheinlichkeit einer Fed-Zinserhöhung im Dezember bei neunundneunzig Komma zwei Prozent."},
+        {"cap": "Am Donnerstag bleibt die Wall Street wegen Thanksgiving geschlossen."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 1, "value": 99.2, "dec": 1, "unit": "%", "sign": false, "color": "ink", "label": "**CME FedWatch** · Zinserhöhung im Dez."}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "down",
+      "headline": "*KI-Zweifel* und Zinssorgen belasten",
+      "source": "**Xetra** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {"cap": "Fazit: KI-Zweifel und Zinssorgen drücken Europas Börsen in eine Verlustwoche."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 6, "dec": 0, "unit": "", "sign": false, "color": "down", "label": "**DAX** · Verlusttage in Folge"}
+      ]
+    }
+  ],
+  "title": "DAX mit schwächster Woche seit über einem Jahr | Börse am Morgen 21.11.",
+  "description": "Der DAX fällt am Freitag 2,6 Prozent und verliert auf Wochensicht mehr als sieben Prozent, der SMI schliesst 1,0 Prozent tiefer. In der neuen Woche stehen die US-Inflationsdaten an, am Donnerstag bleibt die Wall Street wegen Thanksgiving geschlossen.",
+  "tags": ["Börse", "DAX", "SMI", "Wochenbilanz", "Fed", "Thanksgiving", "Wall Street"]
+}
