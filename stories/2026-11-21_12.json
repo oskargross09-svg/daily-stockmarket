@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-21",
+  "edition": "12",
+  "mood": "down",
+  "ticker": [
+    ["Bitcoin", "55 830 $", -5.1],
+    ["Nasdaq", "22 617,7", -5.3],
+    ["S&P 500", "6 910,4", -3.7],
+    ["Dow", "48 147,3", -1.9],
+    ["Nvidia", "125,53 $", -14.0],
+    ["SMI", "14 572,1", -1.0],
+    ["DAX", "24 802,8", -2.6],
+    ["EUR/CHF", "0,9201", -0.6]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow Jones": "Dau Dschouns",
+    "Nvidia": "Enviddia",
+    "KI": "K I",
+    "Bitcoin": "Bittkoin",
+    "Reuters": "Roiters"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "Bitcoin fällt unter *56 000 Dollar*",
+      "source": "**Reuters** · Sa, 05:13 Uhr",
+      "lines": [
+        {"cap": "Guten Tag. Bitcoin fällt in der Nacht auf Samstag unter 56 000 Dollar.",
+         "tts": "Guten Tag. Bitcoin fällt in der Nacht auf Samstag unter sechsundfünfzigtausend Dollar."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -5.1, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**Bitcoin** · Sa, 21.11., 05:13 Uhr"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Bitcoin erstmals seit Juli unter *60 000*",
+      "source": "**Reuters** · Sa, 05:13 Uhr",
+      "lines": [
+        {"cap": "Bitcoin notiert bei 55 830 Dollar, 5,1 Prozent tiefer.",
+         "tts": "Bitcoin notiert bei fünfundfünfzigtausendachthundertdreissig Dollar, fünf Komma eins Prozent tiefer."},
+        {"cap": "Bereits am Freitag rutscht die Kryptowährung erstmals seit Juli unter 60 000 Dollar.",
+         "tts": "Bereits am Freitag rutscht die Kryptowährung erstmals seit Juli unter sechzigtausend Dollar."},
+        {"cap": "Laut Reuters belasten Bewertungssorgen beim KI-Handel auch andere riskante Anlagen."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Bitcoin", "sub": "BTC · US-Dollar", "from": 58830.3, "to": 55830, "dec": 0, "unit": "$", "pct": -5.1, "abs": -3000, "absDec": 0, "absUnit": "$"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Nvidia: *schwächste Woche* seit 2008",
+      "source": "**Nasdaq** · Schluss Fr, 22:00 Uhr",
+      "lines": [
+        {"cap": "Nvidia schliesst am Freitag 14,0 Prozent tiefer bei 125,53 Dollar.",
+         "tts": "Nvidia schliesst am Freitag vierzehn Prozent tiefer, bei hundertfünfundzwanzig Dollar dreiundfünfzig."},
+        {"cap": "Auf Wochensicht verliert die Aktie 23 Prozent.",
+         "tts": "Auf Wochensicht verliert die Aktie dreiundzwanzig Prozent."},
+        {"cap": "Es ist die schwächste Woche seit Oktober 2008.",
+         "tts": "Es ist die schwächste Woche seit Oktober zweitausendacht."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Nvidia", "sub": "NVDA · Nasdaq", "from": 145.98, "to": 125.53, "dec": 2, "unit": "$", "pct": -14.0, "abs": -20.45, "absDec": 2, "absUnit": "$"},
+        {"kind": "kennzahl", "at": 1, "value": -23, "dec": 0, "unit": "%", "sign": true, "color": "down", "label": "**Nvidia** · Wochenbilanz"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "*Nasdaq* rutscht ins Jahresminus",
+      "source": "**Nasdaq** · Schluss Fr, 22:00 Uhr",
+      "lines": [
+        {"cap": "Der Nasdaq Composite schliesst am Freitag 5,3 Prozent tiefer bei 22 618 Punkten.",
+         "tts": "Der Nasdaq Composite schliesst am Freitag fünf Komma drei Prozent tiefer, bei zweiundzwanzigtausendsechshundertachtzehn Punkten."},
+        {"cap": "Damit liegt der Index seit Jahresbeginn im Minus."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Nasdaq", "sub": "Nasdaq Composite", "from": 23879.20, "to": 22617.73, "dec": 1, "pct": -5.3, "abs": -1261.47}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "down",
+      "headline": "KI-Ausverkauf erfasst *Kryptowährungen*",
+      "source": "**Reuters, Nasdaq** · Stand Sa, 05:13 Uhr",
+      "lines": [
+        {"cap": "Fazit: Der Ausverkauf bei KI-Werten erfasst am Wochenende auch Bitcoin."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 55830, "dec": 0, "unit": "$", "sign": false, "color": "down", "label": "**Bitcoin** · Sa, 05:13 Uhr"}
+      ]
+    }
+  ],
+  "title": "Bitcoin unter 56 000 $, Nvidia mit schwächster Woche seit 2008 | Börse am Mittag 21.11.",
+  "description": "Bitcoin fällt in der Nacht auf Samstag 5,1 Prozent auf 55 830 Dollar, nachdem die Kryptowährung am Freitag erstmals seit Juli unter 60 000 Dollar gerutscht ist. Nvidia verliert auf Wochensicht 23 Prozent, der Nasdaq Composite liegt seit Jahresbeginn im Minus.",
+  "tags": ["Börse", "Bitcoin", "Nvidia", "Nasdaq", "Wall Street", "Krypto", "Wochenbilanz"]
+}
