@@ -1,0 +1,202 @@
+{
+  "date": "2026-11-21",
+  "edition": "18",
+  "mood": "down",
+  "ticker": [
+    [
+      "DAX",
+      "24 802,8",
+      -2.6
+    ],
+    [
+      "SMI",
+      "14 572,1",
+      -1.0
+    ],
+    [
+      "S&P 500",
+      "6 910,4",
+      -3.7
+    ],
+    [
+      "Nasdaq",
+      "22 617,7",
+      -5.3
+    ],
+    [
+      "Gold",
+      "3 533 $",
+      -2.6
+    ],
+    [
+      "EUR/CHF",
+      "0,9206",
+      -0.6
+    ],
+    [
+      "USD/CHF",
+      "0,8399",
+      0.0
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "SAP": "S A P",
+    "ABB": "A B B",
+    "UBS": "U B S",
+    "Thanksgiving": "Thänksgiving"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "DAX mit *schwächster Woche* seit April 2025",
+      "source": "**Xetra** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {
+          "cap": "Guten Abend. Der DAX verliert in dieser Woche 7,3 Prozent – so viel wie seit April 2025 nicht mehr.",
+          "tts": "Guten Abend. Der DAX verliert in dieser Woche sieben Komma drei Prozent. So viel wie seit April zweitausendfünfundzwanzig nicht mehr."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -7.3,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**DAX** · Wochenbilanz 13.–20.11."
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "DAX fällt unter *25 000 Punkte*",
+      "source": "**Xetra** · Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {
+          "cap": "Am Freitag schliesst der DAX 2,6 Prozent tiefer bei 24 802,8 Punkten.",
+          "tts": "Am Freitag schliesst der DAX zwei Komma sechs Prozent tiefer, bei vierundzwanzigtausendachthundertzwei Punkten."
+        },
+        {
+          "cap": "Erstmals seit Anfang Oktober liegt der Index unter 25 000 Punkten.",
+          "tts": "Erstmals seit Anfang Oktober liegt der Index unter fünfundzwanzigtausend Punkten."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "at": 0,
+          "value": -2.6,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**DAX** · Schluss Fr, 20.11."
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "*SAP* mit grösstem Wochenverlust",
+      "source": "**Xetra** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {
+          "cap": "SAP verliert auf Wochensicht 14,0 Prozent, die Deutsche Bank 12,2 Prozent.",
+          "tts": "SAP verliert auf Wochensicht vierzehn Prozent, die Deutsche Bank zwölf Komma zwei Prozent."
+        },
+        {
+          "cap": "Einziger DAX-Titel mit Wochenplus ist Vonovia mit 0,8 Prozent.",
+          "tts": "Einziger DAX-Titel mit Wochenplus ist Vonovia, mit null Komma acht Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "DAX-Titel · Woche",
+          "rows": [
+            [
+              "SAP",
+              -13.95
+            ],
+            [
+              "Deutsche Bank",
+              -12.22
+            ],
+            [
+              "Vonovia",
+              0.81
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "SMI schliesst *1,0 Prozent* tiefer",
+      "source": "**SIX** · Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI schliesst am Freitag bei 14 572,1 Punkten.",
+          "tts": "Der SMI schliesst am Freitag bei vierzehntausendfünfhundertzweiundsiebzig Punkten."
+        },
+        {
+          "cap": "ABB und UBS verlieren deutlich, Nestlé und Novartis legen zu."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "SMI",
+          "sub": "Swiss Market Index",
+          "from": 14721.84,
+          "to": 14572.14,
+          "dec": 1,
+          "pct": -1.0,
+          "abs": -149.7
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "Thanksgiving: *Wall Street* ruht",
+      "source": "**NYSE** · Handelskalender",
+      "lines": [
+        {
+          "cap": "Fazit: Nach der Verlustwoche ruht die Wall Street am Donnerstag wegen Thanksgiving."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -7.3,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**DAX** · Wochenbilanz"
+        }
+      ]
+    }
+  ],
+  "title": "DAX mit schwächster Woche seit April 2025, SMI im Minus | Börse am Abend 21.11.",
+  "description": "Der DAX verliert in der vergangenen Woche 7,3 Prozent und schliesst am Freitag bei 24 802,8 Punkten – die schwächste Woche seit April 2025. Auch der SMI schliesst 1,0 Prozent tiefer. Kommende Woche bleibt die Wall Street am Donnerstag wegen Thanksgiving geschlossen.",
+  "tags": [
+    "Börse",
+    "DAX",
+    "SMI",
+    "Wochenbilanz",
+    "SAP",
+    "Aktien",
+    "Thanksgiving"
+  ]
+}
