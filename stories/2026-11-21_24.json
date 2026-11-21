@@ -1,0 +1,212 @@
+{
+  "date": "2026-11-21",
+  "edition": "24",
+  "mood": "up",
+  "ticker": [
+    [
+      "Bitcoin",
+      "60 192 $",
+      2.1
+    ],
+    [
+      "Ether",
+      "1 680 $",
+      3.0
+    ],
+    [
+      "Nasdaq",
+      "22 617,7",
+      -5.3
+    ],
+    [
+      "S&P 500",
+      "6 910,4",
+      -3.7
+    ],
+    [
+      "Dow",
+      "48 147,3",
+      -1.9
+    ],
+    [
+      "Gold",
+      "3 527,46 $",
+      -2.7
+    ],
+    [
+      "Brent",
+      "92,38 $",
+      0.4
+    ],
+    [
+      "EUR/CHF",
+      "0,9201",
+      -0.6
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow Jones": "Dau Dschouns",
+    "AHV": "A H V",
+    "Fed": "Fedd"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Bitcoin wieder über *60 000 Dollar*",
+      "source": "**Reuters** · Sa, 16:16 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Abend. Bitcoin steigt am Samstag wieder über 60 000 Dollar.",
+          "tts": "Guten Abend. Bitcoin steigt am Samstag wieder über sechzigtausend Dollar."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 60192,
+          "dec": 0,
+          "unit": "$",
+          "color": "up",
+          "label": "**Bitcoin** · Sa, 16:16 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Erholung vom *Zweijahrestief*",
+      "source": "**Reuters** · Sa, 16:16 Uhr",
+      "lines": [
+        {
+          "cap": "Zuvor fällt Bitcoin bis auf 55 251,60 Dollar, den tiefsten Stand seit zwei Jahren.",
+          "tts": "Zuvor fällt Bitcoin bis auf fünfundfünfzigtausendzweihunderteinundfünfzig Dollar, den tiefsten Stand seit zwei Jahren."
+        },
+        {
+          "cap": "Am Nachmittag notiert die Kryptowährung 2,1 Prozent höher bei 60 192 Dollar.",
+          "tts": "Am Nachmittag notiert die Kryptowährung zwei Komma eins Prozent höher, bei sechzigtausendeinhundertzweiundneunzig Dollar."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "Bitcoin",
+          "sub": "BTC in US-Dollar",
+          "from": 58930.95,
+          "to": 60192.07,
+          "dec": 0,
+          "pct": 2.1,
+          "abs": 1261.12,
+          "unit": "$",
+          "absUnit": "$",
+          "absDec": 0,
+          "countLine": 1
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "Abstimmung: *0,4 Punkte* mehr MWST",
+      "source": "**Bundeskanzlei, SRF** · Abstimmung 29.11.",
+      "lines": [
+        {
+          "cap": "Am 29. November stimmt die Schweiz über vier Vorlagen ab.",
+          "tts": "Am neunundzwanzigsten November stimmt die Schweiz über vier Vorlagen ab."
+        },
+        {
+          "cap": "Zur Finanzierung der 13. AHV-Rente soll die Mehrwertsteuer um 0,4 Prozentpunkte steigen.",
+          "tts": "Zur Finanzierung der dreizehnten AHV-Rente soll die Mehrwertsteuer um null Komma vier Prozentpunkte steigen."
+        },
+        {
+          "cap": "Zudem geht es um Lockerungen beim Export von Kriegsmaterial."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "at": 0,
+          "value": 0.4,
+          "dec": 1,
+          "unit": "Pkt.",
+          "sign": true,
+          "color": "ink",
+          "label": "**MWST** · für 13. AHV-Rente"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Montag: *Julius Bär* und Fed-Rede",
+      "source": "**Dow Jones Newswires** · Wochenvorschau, Stand Fr",
+      "lines": [
+        {
+          "cap": "Am Montag um 7 Uhr legt Julius Bär Zahlen für die ersten zehn Monate vor.",
+          "tts": "Am Montag um sieben Uhr legt Julius Bär Zahlen für die ersten zehn Monate vor."
+        },
+        {
+          "cap": "Um 22 Uhr spricht New-York-Fed-Präsident John Williams.",
+          "tts": "Um zweiundzwanzig Uhr spricht New-York-Fed-Präsident John Williams."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "Schluss Fr",
+          "rows": [
+            [
+              "Nasdaq",
+              -5.3
+            ],
+            [
+              "S&P 500",
+              -3.7
+            ],
+            [
+              "Dow",
+              -1.9
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Nächste Probe: *Wall Street* am Montag",
+      "source": "**Reuters** · Stand Sa, 16:16 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Bitcoin erholt sich am Wochenende, die nächste Probe folgt mit der Wall Street am Montag."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 2.1,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Bitcoin** · Sa, 16:16 Uhr"
+        }
+      ]
+    }
+  ],
+  "title": "Bitcoin wieder über 60 000 $, Schweiz stimmt über MWST ab | Börse in der Nacht 21.11.",
+  "description": "Bitcoin erholt sich am Samstag vom tiefsten Stand seit zwei Jahren und steigt wieder über 60 000 Dollar. Am 29. November entscheidet die Schweiz unter anderem über 0,4 Prozentpunkte mehr Mehrwertsteuer für die 13. AHV-Rente. Zum Wochenstart folgen Julius Bär und eine Rede von New-York-Fed-Präsident John Williams.",
+  "tags": [
+    "Börse",
+    "Bitcoin",
+    "Krypto",
+    "Abstimmung",
+    "Mehrwertsteuer",
+    "AHV",
+    "Julius Bär",
+    "Wall Street"
+  ]
+}
