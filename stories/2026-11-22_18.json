@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-22",
+  "edition": "18",
+  "mood": "flat",
+  "ticker": [
+    ["Bitcoin", "60 898,38 $", 1.27],
+    ["Ether", "1 706,53 $", 1.45],
+    ["SMI", "14 572,1", -1.0],
+    ["DAX", "24 802,8", -2.6],
+    ["Dow", "48 147,3", -1.9],
+    ["Gold", "3 527,46 $", -2.7],
+    ["Brent", "92,38 $", 0.4],
+    ["EUR/CHF", "0,9201", -0.6]
+  ],
+  "say": {
+    "PCE": "P C E",
+    "ifo": "Ifo",
+    "BIP": "B I P"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "flat",
+      "headline": "Neue Woche: *US-Inflation* im Fokus",
+      "source": "**Investing.com, aktiencheck** · Wochenvorschau, Stand Fr",
+      "lines": [
+        {"cap": "Guten Abend. Für die US-Kerninflation PCE erwarten Ökonomen am Mittwoch 3,2 Prozent.",
+         "tts": "Guten Abend. Für die US-Kerninflation PCE erwarten Ökonomen am Mittwoch drei Komma zwei Prozent."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 3.2, "dec": 1, "unit": "%", "sign": false, "color": "ink", "label": "**PCE-Kernrate** · Prognose Okt"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Mittwoch um *14:30 Uhr*: PCE und BIP",
+      "source": "**Investing.com, aktiencheck** · Terminvorschau, Stand Fr",
+      "lines": [
+        {"cap": "Die Teuerungsdaten für Oktober erscheinen um 14:30 Uhr Schweizer Zeit.",
+         "tts": "Die Teuerungsdaten für Oktober erscheinen um vierzehn Uhr dreissig Schweizer Zeit."},
+        {"cap": "Im September lag die Kernrate bei 3,1 Prozent.",
+         "tts": "Im September lag die Kernrate bei drei Komma eins Prozent."},
+        {"cap": "Gleichzeitig folgt die zweite Schätzung zum US-BIP im dritten Quartal."}
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "PCE-Kernrate", "rows": [["September", 3.1], ["Prognose Okt", 3.2]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Dienstag: *ifo-Index* für Deutschland",
+      "source": "**Investing.com** · Terminvorschau, Stand Fr",
+      "lines": [
+        {"cap": "Am Montag um 9:30 Uhr erscheinen die deutschen Einkaufsmanagerindizes.",
+         "tts": "Am Montag um neun Uhr dreissig erscheinen die deutschen Einkaufsmanagerindizes."},
+        {"cap": "Am Dienstag folgt das ifo-Geschäftsklima, im Oktober lag es bei 90,2 Punkten.",
+         "tts": "Am Dienstag folgt das Ifo-Geschäftsklima, im Oktober lag es bei neunzig Komma zwei Punkten."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 90.2, "dec": 1, "color": "ink", "label": "**ifo-Geschäftsklima** · Oktober"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Bitcoin erholt sich auf *60 898 Dollar*",
+      "source": "**finanzen.net, dpa-AFX** · So, 12:31 Uhr",
+      "lines": [
+        {"cap": "Bitcoin steigt am Sonntagmittag um 1,3 Prozent auf 60 898 Dollar.",
+         "tts": "Bitcoin steigt am Sonntagmittag um eins Komma drei Prozent auf sechzigtausendachthundertachtundneunzig Dollar."},
+        {"cap": "In der Nacht auf Samstag fiel er auf fast 55 000 Dollar, den tiefsten Stand seit September 2024.",
+         "tts": "In der Nacht auf Samstag fiel er auf fast fünfundfünfzigtausend Dollar, den tiefsten Stand seit September zweitausendvierundzwanzig."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Bitcoin", "sub": "BTC/USD", "from": 60132.14, "to": 60898.38, "dec": 0, "unit": "$", "absUnit": "$", "absDec": 0, "pct": 1.27, "abs": 766.24}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "Wall Street ruht an *Thanksgiving*",
+      "source": "**NYSE** · Handelskalender",
+      "lines": [
+        {"cap": "Fazit: Am Donnerstag bleibt die Wall Street wegen Thanksgiving geschlossen, am Freitag endet der Handel um 19 Uhr Schweizer Zeit.",
+         "tts": "Fazit: Am Donnerstag bleibt die Wall Street wegen Thanksgiving geschlossen, am Freitag endet der Handel um neunzehn Uhr Schweizer Zeit."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 4, "dec": 0, "color": "ink", "label": "**NYSE** · Handelstage, Fr verkürzt"}
+      ]
+    }
+  ],
+  "title": "Thanksgiving-Woche: US-Inflation im Fokus, Bitcoin erholt | Börse am Abend 22.11.",
+  "description": "Nach der schwachen Börsenwoche richtet sich der Blick auf die US-Kerninflation PCE am Mittwoch, für die Ökonomen 3,2 Prozent erwarten. Bitcoin erholt sich am Sonntag auf knapp 61 000 Dollar, am Donnerstag bleibt die Wall Street wegen Thanksgiving geschlossen.",
+  "tags": ["Börse", "Wochenausblick", "PCE", "Inflation", "Thanksgiving", "Bitcoin", "ifo"]
+}
