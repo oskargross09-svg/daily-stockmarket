@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-22",
+  "edition": "06",
+  "mood": "down",
+  "ticker": [
+    ["Nasdaq", "22 617,7", -5.3],
+    ["S&P 500", "6 910,4", -3.7],
+    ["Dow", "48 147,3", -1.9],
+    ["SMI", "14 572,1", -1.0],
+    ["DAX", "24 802,8", -2.6],
+    ["Bitcoin", "60 192 $", 2.1],
+    ["Gold", "3 527,46 $", -2.7],
+    ["EUR/CHF", "0,9201", -0.6]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow Jones": "Dau Dschouns",
+    "PCE": "P C E",
+    "Thanksgiving": "Thänksgiwing"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "Wall Street: *schwächste Woche*",
+      "source": "**Nasdaq, RTTNews** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {"cap": "Guten Morgen. Die Wall Street beendet die schwächste Woche seit März 2020.",
+         "tts": "Guten Morgen. Die Wall Street beendet die schwächste Woche seit März zwanzigzwanzig."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -10.0, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**Nasdaq** · Woche bis Fr, 20.11."}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Nasdaq verliert *10 Prozent*",
+      "source": "**Nasdaq, NYSE, RTTNews** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {"cap": "Die Nasdaq verliert auf Wochensicht 10 Prozent, allein am Freitag 5,3 Prozent.",
+         "tts": "Die Nasdaq verliert auf Wochensicht zehn Prozent, allein am Freitag fünf Komma drei Prozent."},
+        {"cap": "Der S&P 500 fällt in der Woche 8,6 Prozent, der Dow Jones 8 Prozent.",
+         "tts": "Der S und P fünfhundert fällt in der Woche acht Komma sechs Prozent, der Dow Jones acht Prozent."},
+        {"cap": "Mit 6 910 Punkten liegt der S&P 500 mehr als 10 Prozent unter seinem Rekord.",
+         "tts": "Mit sechstausendneunhundertzehn Punkten liegt der S und P fünfhundert mehr als zehn Prozent unter seinem Rekord."}
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "Wochenbilanz USA", "rows": [["Nasdaq", -10.0], ["S&P 500", -8.6], ["Dow", -8.0]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Neue Woche: *Julius Bär* und US-Inflation",
+      "source": "**dpa-AFX** · Wochenvorschau, Stand Fr",
+      "lines": [
+        {"cap": "Am Montag um 7 Uhr legt Julius Bär neue Geschäftszahlen vor.",
+         "tts": "Am Montag um sieben Uhr legt Julius Bär neue Geschäftszahlen vor."},
+        {"cap": "Am Mittwoch folgt in den USA die PCE-Inflation für Oktober."},
+        {"cap": "Die Commerzbank erwartet eine Teuerung von 3,8 Prozent.",
+         "tts": "Die Commerzbank erwartet eine Teuerung von drei Komma acht Prozent."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 1, "value": 3.8, "dec": 1, "unit": "%", "sign": false, "color": "ink", "label": "**PCE-Inflation Okt.** · Prognose Commerzbank"}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "down",
+      "headline": "Blick richtet sich auf die *US-Inflation*",
+      "source": "**NYSE, RTTNews** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {"cap": "Fazit: Nach dem Ausverkauf an der Wall Street richtet sich der Blick auf die Inflationsdaten am Mittwoch."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -8.6, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**S&P 500** · Woche bis Fr, 20.11."}
+      ]
+    }
+  ],
+  "title": "Wall Street mit schwächster Woche seit 2020, Nasdaq −10 % | Börse am Morgen 22.11.",
+  "description": "Die Nasdaq verliert in der Woche bis Freitag 10 Prozent, der S&P 500 8,6 und der Dow Jones 8 Prozent – die schwächste Woche seit März 2020. In der neuen Woche legt Julius Bär am Montag Zahlen vor, am Mittwoch folgt die US-Inflation PCE für Oktober.",
+  "tags": ["Börse", "Wall Street", "Nasdaq", "S&P 500", "Dow Jones", "Julius Bär", "Inflation", "Wochenbilanz"]
+}
