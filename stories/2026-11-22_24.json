@@ -1,0 +1,190 @@
+{
+  "date": "2026-11-22",
+  "edition": "24",
+  "mood": "flat",
+  "ticker": [
+    [
+      "Bitcoin",
+      "60 912,96 $",
+      1.3
+    ],
+    [
+      "Ether",
+      "1 716,98 $",
+      2.07
+    ],
+    [
+      "Nasdaq",
+      "22 617,7",
+      -5.3
+    ],
+    [
+      "S&P 500",
+      "6 910,4",
+      -3.7
+    ],
+    [
+      "Dow",
+      "48 147,3",
+      -1.9
+    ],
+    [
+      "Gold",
+      "3 527,46 $",
+      -2.7
+    ],
+    [
+      "Brent",
+      "92,38 $",
+      0.4
+    ],
+    [
+      "EUR/CHF",
+      "0,9201",
+      -0.6
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "HPE": "H P E",
+    "UBS": "U B S",
+    "SVP": "S V P",
+    "ETH": "E T H",
+    "S&P": "S und P"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "Tech-Zahlen nach dem *Nasdaq-Einbruch*",
+      "source": "**Nasdaq** · Schluss Fr, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Abend. Nach dem Minus von 5,3 Prozent beim Nasdaq am Freitag legen diese Woche grosse Tech-Firmen Zahlen vor.",
+          "tts": "Guten Abend. Nach dem Minus von fünf Komma drei Prozent beim Nasdaq am Freitag legen diese Woche grosse Tech-Firmen Zahlen vor."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -5.3,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**Nasdaq Composite** · Schluss Fr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Dell, HPE und Zoom *legen Zahlen vor*",
+      "source": "**NYSE, Yahoo Finance** · Schluss Fr, Wochenvorschau",
+      "lines": [
+        {
+          "cap": "Der S&P 500 schloss am Freitag 3,7 Prozent tiefer bei 6 910 Punkten.",
+          "tts": "Der S und P fünfhundert schloss am Freitag drei Komma sieben Prozent tiefer bei sechstausendneunhundertzehn Punkten."
+        },
+        {
+          "cap": "Am Montag berichten Hewlett Packard Enterprise und Zoom."
+        },
+        {
+          "cap": "Am Dienstag folgen Dell, Workday, Autodesk und HP."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "S&P 500",
+          "sub": "Standard & Poor's 500",
+          "from": 7175.83,
+          "to": 6910.39,
+          "dec": 1,
+          "pct": -3.7,
+          "abs": -265.44
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "SVP-Ticket sorgt für *Unruhe*",
+      "source": "**SonntagsZeitung, AWP** · So, 17:32 Uhr",
+      "lines": [
+        {
+          "cap": "Für die Bundesratswahl schlägt die SVP Thomas Aeschi und Michael Graber vor."
+        },
+        {
+          "cap": "Laut SonntagsZeitung wird über eine Sprengkandidatur diskutiert."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "statement",
+          "quote": "„Wir behalten uns alles offen.“",
+          "who": "Mattea Meyer",
+          "role": "Co-Präsidentin SP"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "Ökonomen kontern die *UBS*",
+      "source": "**SonntagsZeitung, AWP** · So, 17:32 Uhr",
+      "lines": [
+        {
+          "cap": "Drei Ökonomen weisen die Argumente der UBS gegen strengere Kapitalregeln zurück."
+        },
+        {
+          "cap": "ETH-Ökonom Michael Graf sagt, die UBS sei schlicht zu gross für die Schweiz."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 3,
+          "dec": 0,
+          "color": "ink",
+          "label": "**Ökonomen** · gegen UBS-Argumente"
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Bitcoin hält sich über *60 000 Dollar*",
+      "source": "**finanzen.net** · So, 17:11 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Bitcoin steigt am Sonntag um 1,3 Prozent auf 60 913 Dollar.",
+          "tts": "Fazit: Bitcoin steigt am Sonntag um eins Komma drei Prozent auf sechzigtausendneunhundertdreizehn Dollar."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 1.3,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Bitcoin** · So, 17:11 Uhr"
+        }
+      ]
+    }
+  ],
+  "title": "Tech-Zahlen nach Nasdaq-Einbruch, Unruhe um SVP-Ticket | Börse in der Nacht 22.11.",
+  "description": "Nach dem Minus von 5,3 Prozent beim Nasdaq am Freitag legen diese Woche Dell, HPE, Zoom und Workday Zahlen vor. In der Schweiz sorgt das SVP-Ticket für die Bundesratswahl für Diskussionen, und Ökonomen widersprechen der UBS bei den Kapitalregeln.",
+  "tags": [
+    "Börse",
+    "Nasdaq",
+    "Dell",
+    "Bundesratswahl",
+    "UBS",
+    "Bitcoin",
+    "S&P 500"
+  ]
+}
