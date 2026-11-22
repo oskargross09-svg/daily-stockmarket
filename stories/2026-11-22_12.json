@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-22",
+  "edition": "12",
+  "mood": "down",
+  "ticker": [
+    ["SMI", "14 572,1", -1.0],
+    ["DAX", "24 802,8", -2.6],
+    ["Nasdaq", "22 617,7", -5.3],
+    ["Bitcoin", "59 979,35 $", -0.25],
+    ["Ether", "1 687,45 $", 0.32],
+    ["Gold", "3 527,46 $", -2.7],
+    ["EUR/CHF", "0,9201", -0.6]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "AMS Osram": "A M S Osram",
+    "VAT": "Vau A Te"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "SMI mit *3,5 Prozent* Wochenverlust",
+      "source": "**SIX, AWP** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {"cap": "Guten Tag. Der SMI verliert in dieser Woche 3,5 Prozent.",
+         "tts": "Guten Tag. Der S M I verliert in dieser Woche drei Komma fünf Prozent."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -3.5, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**SMI** · Woche bis Fr, 20.11."}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Vom *Rekord* ins Wochenminus",
+      "source": "**SIX, AWP** · Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {"cap": "Am vergangenen Montag erreicht der SMI ein Allzeithoch bei 15 272 Punkten.",
+         "tts": "Am vergangenen Montag erreicht der S M I ein Allzeithoch bei fünfzehntausendzweihundertzweiundsiebzig Punkten."},
+        {"cap": "Am Freitag schliesst er 1,0 Prozent tiefer bei 14 572,1 Punkten.",
+         "tts": "Am Freitag schliesst er ein Prozent tiefer bei vierzehntausendfünfhundertzweiundsiebzig Komma eins Punkten."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 0, "value": 15272, "dec": 0, "color": "ink", "label": "**SMI** · Allzeithoch Mo, 16.11."},
+        {"kind": "quote", "at": 1, "name": "SMI", "sub": "Swiss Market Index", "from": 14721.8, "to": 14572.1, "dec": 1, "pct": -1.0, "abs": -149.7}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Technahe Titel unter *Druck*",
+      "source": "**AWP** · Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {"cap": "Am Freitag verlieren AMS Osram 8,9 Prozent und Comet 7,9 Prozent.",
+         "tts": "Am Freitag verlieren A M S Osram acht Komma neun Prozent und Comet sieben Komma neun Prozent."},
+        {"cap": "Auf Wochensicht büssen technahe Werte rund 7 Prozent ein.",
+         "tts": "Auf Wochensicht büssen technahe Werte rund sieben Prozent ein."}
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "Freitag", "rows": [["AMS Osram", -8.9], ["Comet", -7.9], ["VAT", -5.7], ["ABB", -4.2]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Bitcoin pendelt um *60 000 Dollar*",
+      "source": "**finanzen.net** · So, 09:41 Uhr",
+      "lines": [
+        {"cap": "Bitcoin notiert am Sonntagvormittag bei 59 979 Dollar, leicht tiefer als am Vortag.",
+         "tts": "Bitcoin notiert am Sonntagvormittag bei neunundfünfzigtausendneunhundertneunundsiebzig Dollar, leicht tiefer als am Vortag."},
+        {"cap": "Ether legt leicht zu auf 1 687 Dollar.",
+         "tts": "Ether legt leicht zu auf eintausendsechshundertsiebenundachtzig Dollar."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Bitcoin", "sub": "BTC/USD", "from": 60132.14, "to": 59979.35, "dec": 0, "unit": "$", "absUnit": "$", "absDec": 0, "pct": -0.25, "abs": -152.79}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "down",
+      "headline": "Montag: *Julius Bär* und Einkaufsmanager",
+      "source": "**dpa-AFX** · Terminvorschau, Stand Fr",
+      "lines": [
+        {"cap": "Fazit: Nach dem Rekord zu Wochenbeginn schliesst der SMI die Woche klar im Minus, morgen folgen Julius Bär und um 9:30 Uhr die deutschen Einkaufsmanagerindizes.",
+         "tts": "Fazit: Nach dem Rekord zu Wochenbeginn schliesst der S M I die Woche klar im Minus, morgen folgen Julius Bär und um neun Uhr dreissig die deutschen Einkaufsmanagerindizes."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -3.5, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**SMI** · Wochenbilanz"}
+      ]
+    }
+  ],
+  "title": "SMI vom Rekord ins Wochenminus: −3,5 % | Börse am Mittag 22.11.",
+  "description": "Der SMI erreicht am Montag ein Allzeithoch bei 15 272 Punkten und beendet die Woche mit einem Minus von 3,5 Prozent. Technahe Schweizer Titel verlieren auf Wochensicht rund 7 Prozent, Bitcoin pendelt am Sonntag um 60 000 Dollar.",
+  "tags": ["Börse", "SMI", "Wochenbilanz", "Schweizer Aktien", "AMS Osram", "Bitcoin", "Julius Bär"]
+}
