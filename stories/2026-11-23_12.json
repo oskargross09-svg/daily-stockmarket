@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-23",
+  "edition": "12",
+  "mood": "up",
+  "ticker": [
+    [
+      "SMI",
+      "14 646,1",
+      0.5
+    ],
+    [
+      "DAX",
+      "25 008",
+      0.8
+    ],
+    [
+      "S&P-Fut.",
+      "",
+      2.1
+    ],
+    [
+      "Dow-Fut.",
+      "",
+      1.5
+    ],
+    [
+      "Infineon",
+      "",
+      3.5
+    ],
+    [
+      "Nemetschek",
+      "",
+      -5.0
+    ],
+    [
+      "Brent",
+      "92,21 $",
+      -0.4
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow": "Dau",
+    "S&P": "S und P",
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "JPMorgan": "Dschej Pi Morgan",
+    "Nemetschek": "Nemetschek",
+    "Infineon": "Infineon",
+    "Fed": "Fed"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Europas Börsen stoppen die *Talfahrt*",
+      "source": "**dpa-AFX** · Mo, 10:12 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Tag. Der DAX stoppt am Vormittag vorerst seine sechstägige Verlustserie."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 0.8,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**DAX** · Mo, 10:12 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI am Vormittag *0,5 Prozent* höher",
+      "source": "**SIX, dpa-AFX** · Mo, 11:04 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI steigt bis 11 Uhr um 0,5 Prozent auf 14 646 Punkte.",
+          "tts": "Der SMI steigt bis elf Uhr um null Komma fünf Prozent, auf vierzehntausendsechshundertsechsundvierzig Punkte."
+        },
+        {
+          "cap": "Der DAX legt 0,8 Prozent auf 25 008 Punkte zu.",
+          "tts": "Der DAX legt null Komma acht Prozent zu, auf fünfundzwanzigtausendacht Punkte."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "SMI",
+          "sub": "Swiss Market Index",
+          "from": 14572.14,
+          "to": 14646.06,
+          "dec": 1,
+          "pct": 0.5,
+          "abs": 73.92
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Leitindizes am Vormittag",
+          "rows": [
+            [
+              "SMI",
+              0.5
+            ],
+            [
+              "DAX",
+              0.8
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Infineon vorn, *Nemetschek* fällt",
+      "source": "**dpa-AFX** · Mo, 10:12 Uhr",
+      "lines": [
+        {
+          "cap": "Im DAX führt Infineon mit fast 3,5 Prozent Plus.",
+          "tts": "Im DAX führt Infineon, mit fast drei Komma fünf Prozent Plus."
+        },
+        {
+          "cap": "Nemetschek fällt um 5 Prozent nach einer Herabstufung durch JPMorgan.",
+          "tts": "Nemetschek fällt um fünf Prozent, nach einer Herabstufung durch JPMorgan."
+        },
+        {
+          "cap": "Bayer gibt Anfangsgewinne ab, trotz US-Genehmigung des Glyphosat-Vergleichs.",
+          "tts": "Bayer gibt Anfangsgewinne ab, trotz der U S Genehmigung des Glyphosat Vergleichs."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "at": 0,
+          "value": 3.5,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Infineon** · fast 3,5 %, Mo, 10:12 Uhr"
+        },
+        {
+          "kind": "kennzahl",
+          "at": 1,
+          "value": -5.0,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**Nemetschek** · Mo, 10:12 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "US-Futures *steigen*, Daten am Nachmittag",
+      "source": "**AP, finanzen.ch** · Mo, Stand früh",
+      "lines": [
+        {
+          "cap": "Die Futures auf den S&P 500 steigen um 2,1 Prozent, beim Dow um 1,5 Prozent.",
+          "tts": "Die Futures auf den S und P fünfhundert steigen um zwei Komma eins Prozent, beim Dow um eins Komma fünf Prozent."
+        },
+        {
+          "cap": "Um 15.45 Uhr folgen die US-Einkaufsmanagerindizes für November.",
+          "tts": "Um fünfzehn Uhr fünfundvierzig folgen die U S Einkaufsmanagerindizes für November."
+        },
+        {
+          "cap": "Am Abend spricht der Präsident der New Yorker Fed, John Williams.",
+          "tts": "Am Abend spricht der Präsident der New Yorker Fed, John Williams."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "US-Futures",
+          "rows": [
+            [
+              "S&P 500",
+              2.1
+            ],
+            [
+              "Dow",
+              1.5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Europa *erholt* sich vorerst",
+      "source": "**SIX** · Mo, 11:04 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Europas Börsen erholen sich vorerst, die US-Futures steigen.",
+          "tts": "Fazit: Europas Börsen erholen sich vorerst, die U S Futures steigen."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 0.5,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**SMI** · Mo, 11:04 Uhr"
+        }
+      ]
+    }
+  ],
+  "title": "DAX stoppt Verlustserie, SMI 0,5 % höher | Börse am Mittag 23.11.",
+  "description": "Nach sechs Verlusttagen erholt sich der DAX am Vormittag um 0,8 Prozent, der SMI steigt um 0,5 Prozent. Infineon führt, Nemetschek fällt nach einer Herabstufung. Die US-Futures signalisieren einen festeren Start, am Nachmittag folgen US-Einkaufsmanagerdaten.",
+  "tags": [
+    "Börse",
+    "SMI",
+    "DAX",
+    "Infineon",
+    "Bayer",
+    "US-Futures",
+    "Aktien"
+  ]
+}
