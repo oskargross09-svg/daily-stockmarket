@@ -1,0 +1,236 @@
+{
+  "date": "2026-11-23",
+  "edition": "24",
+  "mood": "up",
+  "ticker": [
+    [
+      "Dow",
+      "49 595,3",
+      3.0
+    ],
+    [
+      "S&P 500",
+      "7 237,2",
+      4.7
+    ],
+    [
+      "Nasdaq",
+      "24 089,6",
+      6.5
+    ],
+    [
+      "Nvidia",
+      "165,05 $",
+      31.5
+    ],
+    [
+      "EUR/CHF",
+      "0,9176",
+      -0.4
+    ],
+    [
+      "USD/CHF",
+      "0,8416",
+      0.2
+    ],
+    [
+      "Gold",
+      "3 634,40 $",
+      3.4
+    ],
+    [
+      "Brent",
+      "86,64 $",
+      -3.7
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow": "Dau",
+    "S&P": "S und P",
+    "Nvidia": "Envidia",
+    "Jensen Huang": "Dschensen Huang",
+    "HPE": "H P E",
+    "CME": "C M E",
+    "FedWatch": "Fed Wotsch",
+    "BNP Paribas": "B N P Paribas"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Bester Börsentag seit *April 2025*",
+      "source": "**Nasdaq, finanzen.ch** · Schluss Mo, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Abend. Die Wall Street erlebt den besten Tag seit April 2025, der Nasdaq schliesst 6,5 Prozent höher.",
+          "tts": "Guten Abend. Die Wall Street erlebt den besten Tag seit April zweitausendfünfundzwanzig, der Nasdaq schliesst sechs Komma fünf Prozent höher."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 6.5,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Nasdaq Composite** · Schluss Mo"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Dow Jones steigt um *1 448 Punkte*",
+      "source": "**NYSE, finanzen.ch** · Schluss Mo, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Der Dow Jones schliesst 3,0 Prozent höher bei 49 595 Punkten.",
+          "tts": "Der Dow Jones schliesst drei Prozent höher, bei neunundvierzigtausendfünfhundertfünfundneunzig Punkten."
+        },
+        {
+          "cap": "Der S&P 500 gewinnt 4,7 Prozent auf 7 237 Punkte.",
+          "tts": "Der S und P fünfhundert gewinnt vier Komma sieben Prozent."
+        },
+        {
+          "cap": "Nvidia steigt nach der Rückkehr von Jensen Huang um rund 31 Prozent.",
+          "tts": "Nvidia steigt nach der Rückkehr von Jensen Huang um rund einunddreissig Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "Dow Jones",
+          "sub": "Dow Jones Industrial Average",
+          "from": 48147.33,
+          "to": 49595.31,
+          "dec": 1,
+          "pct": 3.0,
+          "abs": 1447.98
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Wall Street, Schluss Mo",
+          "rows": [
+            [
+              "Nasdaq",
+              6.51
+            ],
+            [
+              "S&P 500",
+              4.73
+            ],
+            [
+              "Dow",
+              3.01
+            ]
+          ]
+        },
+        {
+          "kind": "kennzahl",
+          "at": 2,
+          "value": 31,
+          "dec": 0,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Nvidia** · Schluss Mo"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "HPE übertrifft *Erwartungen*",
+      "source": "**Investing.com, Reuters** · Mo, 21:48 Uhr",
+      "lines": [
+        {
+          "cap": "HPE meldet 14,55 Milliarden Dollar Quartalsumsatz, mehr als erwartet.",
+          "tts": "H P E meldet vierzehn Komma fünf fünf Milliarden Dollar Quartalsumsatz, mehr als erwartet."
+        },
+        {
+          "cap": "Der Konzern hebt die Prognose an, die Aktie fällt nachbörslich trotzdem um mehr als 6 Prozent.",
+          "tts": "Der Konzern hebt die Prognose an, die Aktie fällt nachbörslich trotzdem um mehr als sechs Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "at": 0,
+          "value": 1.43,
+          "dec": 2,
+          "unit": "$",
+          "sign": false,
+          "color": "ink",
+          "label": "**HPE** · Gewinn je Aktie Q4"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "Markt erwartet *Zinserhöhung* der Fed",
+      "source": "**CME FedWatch, BNP Paribas** · Mo, 18:00 Uhr",
+      "lines": [
+        {
+          "cap": "Laut CME FedWatch liegt die Wahrscheinlichkeit einer Zinserhöhung im Dezember bei 95 Prozent.",
+          "tts": "Laut CME FedWatch liegt die Wahrscheinlichkeit einer Zinserhöhung im Dezember bei fünfundneunzig Prozent."
+        },
+        {
+          "cap": "BNP Paribas rechnet bis März mit drei Erhöhungen um je 0,25 Prozentpunkte.",
+          "tts": "BNP Paribas rechnet bis März mit drei Erhöhungen um je null Komma zwei fünf Prozentpunkte."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "at": 0,
+          "value": 95,
+          "dec": 0,
+          "unit": "%",
+          "sign": false,
+          "color": "ink",
+          "label": "**Zinserhöhung Dez.** · CME FedWatch"
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Erholung trotz *Zinssorgen*",
+      "source": "**ad-hoc-news, finanzen.ch** · Schluss Mo, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Die Wall Street erholt sich kräftig, die Zinssorgen bleiben.",
+          "tts": "Fazit: Die Wall Street erholt sich kräftig, die Zinssorgen bleiben."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 4.7,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**S&P 500** · Schluss Mo"
+        }
+      ]
+    }
+  ],
+  "title": "Bester Tag seit April 2025, Nasdaq +6,5 % | Börse in der Nacht 23.11.",
+  "description": "Nach der Rückkehr von Jensen Huang zu Nvidia schliesst die Wall Street mit dem besten Tag seit April 2025: Nasdaq +6,5 %, S&P 500 +4,7 %, Dow +3,0 %. HPE übertrifft die Erwartungen, fällt nachbörslich aber; der Markt rechnet fest mit einer Zinserhöhung der Fed im Dezember.",
+  "tags": [
+    "Börse",
+    "Wall Street",
+    "Nvidia",
+    "Nasdaq",
+    "Dow Jones",
+    "HPE",
+    "Fed",
+    "Zinsen"
+  ]
+}
