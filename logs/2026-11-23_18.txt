@@ -1,0 +1,7 @@
+job: videos/2026-11-23_18.json
+run: 20261123T164118
+Fertig: https://youtu.be/ldsRmt3NbjE
+Status: private
+VIDEO_ID=ldsRmt3NbjE
+Veröffentlichung geplant: 2026-11-23T17:00:00Z
+rc=0
