@@ -1,0 +1,7 @@
+job: videos/2026-11-23_06.json
+run: 20261123T042335
+Fertig: https://youtu.be/dW4diZKAFKQ
+Status: private
+VIDEO_ID=dW4diZKAFKQ
+Veröffentlichung geplant: 2026-11-23T05:00:00Z
+rc=0
