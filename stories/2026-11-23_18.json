@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-23",
+  "edition": "18",
+  "mood": "up",
+  "ticker": [
+    ["SMI", "14 734,1", 1.1],
+    ["DAX", "25 318", 2.1],
+    ["S&P 500", "7 227,4", 4.6],
+    ["Nasdaq", "24 269,7", 7.3],
+    ["EUR/CHF", "0,9188", -0.3],
+    ["Gold", "3 668,15 $", 3.8],
+    ["Brent", "88,70 $", -4.2],
+    ["Bitcoin", "63 191,87 $", 3.9]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow": "Dau",
+    "S&P": "S und P",
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "KI": "K I",
+    "Jensen Huang": "Dschensen Huang",
+    "Nvidia": "Envidia",
+    "Richemont": "Rischmong",
+    "Nestlé": "Nestle"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Huang-Rückkehr treibt *Nasdaq* an",
+      "source": "**Reuters** · Mo, Eröffnung 15:30 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Abend. Nvidia setzt Jensen Huang wieder als Chef ein, die Nasdaq eröffnet 7,3 Prozent höher.",
+          "tts": "Guten Abend. Nvidia setzt Jensen Huang wieder als Chef ein, die Nasdaq eröffnet sieben Komma drei Prozent höher."
+        }
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 7.3, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**Nasdaq** · Eröffnung Mo"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Wall Street startet *deutlich* höher",
+      "source": "**Reuters, NYSE** · Mo, Eröffnung 15:30 Uhr",
+      "lines": [
+        {
+          "cap": "Der S&P 500 eröffnet 4,6 Prozent höher bei 7 227 Punkten.",
+          "tts": "Der S und P fünfhundert eröffnet vier Komma sechs Prozent höher, bei siebentausendzweihundertsiebenundzwanzig Punkten."
+        },
+        {
+          "cap": "Der Dow Jones legt 2,3 Prozent zu, die Nvidia-Aktie stieg vorbörslich um 28 Prozent.",
+          "tts": "Der Dow Jones legt zwei Komma drei Prozent zu, die Nvidia Aktie stieg vorbörslich um achtundzwanzig Prozent."
+        }
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "S&P 500", "sub": "Eröffnung", "from": 6910.39, "to": 7227.41, "dec": 1, "pct": 4.6, "abs": 317.02},
+        {"kind": "bars", "at": 1, "title": "Wall Street, Eröffnung", "rows": [["Nasdaq", 7.30], ["S&P 500", 4.59], ["Dow", 2.27]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI und DAX am Abend *fester*",
+      "source": "**SIX, finanzen.ch** · Mo, 16:47 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI notiert am späten Nachmittag 1,1 Prozent höher bei 14 734 Punkten.",
+          "tts": "Der SMI notiert am späten Nachmittag eins Komma eins Prozent höher, bei vierzehntausendsiebenhundertvierunddreissig Punkten."
+        },
+        {
+          "cap": "Der DAX steigt um 2,1 Prozent, die Techwerte führen die Erholung an.",
+          "tts": "Der DAX steigt um zwei Komma eins Prozent, die Techwerte führen die Erholung an."
+        }
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "SMI", "sub": "Swiss Market Index", "from": 14572.14, "to": 14734.11, "dec": 1, "pct": 1.1, "abs": 161.97},
+        {"kind": "bars", "at": 1, "title": "Leitindizes Europa", "rows": [["DAX", 2.1], ["SMI", 1.1]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Infineon vorn, *Bayer* im Minus",
+      "source": "**dpa-AFX, AWP** · Mo, Nachmittag",
+      "lines": [
+        {
+          "cap": "Im DAX steigt Infineon um 9 Prozent, Siemens Energy um 7,3 Prozent.",
+          "tts": "Im DAX steigt Infineon um neun Prozent, Siemens Energy um sieben Komma drei Prozent."
+        },
+        {
+          "cap": "Im SMI führt ABB mit 4,1 Prozent Plus, Nestlé gibt 1,1 Prozent ab.",
+          "tts": "Im SMI führt ABB mit vier Komma eins Prozent Plus, Nestlé gibt eins Komma eins Prozent ab."
+        },
+        {
+          "cap": "Bayer fällt um 5,2 Prozent.",
+          "tts": "Bayer fällt um fünf Komma zwei Prozent."
+        }
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "Gewinner im DAX", "rows": [["Infineon", 9.0], ["Siemens Energy", 7.3]]},
+        {"kind": "bars", "at": 1, "title": "SMI-Titel", "rows": [["ABB", 4.1], ["Nestlé", -1.05]]},
+        {"kind": "kennzahl", "at": 2, "value": -5.2, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**Bayer** · Mo, 16:34 Uhr"}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Tech-Erholung auf *breiter* Front",
+      "source": "**Reuters** · Mo, Eröffnung 15:30 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Nach der Huang-Rückkehr kaufen Anleger wieder Technologiewerte.",
+          "tts": "Fazit: Nach der Huang Rückkehr kaufen Anleger wieder Technologiewerte."
+        }
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 4.6, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**S&P 500** · Eröffnung Mo"}
+      ]
+    }
+  ],
+  "title": "Nvidia holt Huang zurück, Nasdaq +7,3 % | Börse am Abend 23.11.",
+  "description": "Nvidia setzt Jensen Huang wieder als Chef ein, die Wall Street eröffnet deutlich höher: Nasdaq +7,3 %, S&P 500 +4,6 %. Auch SMI und DAX legen zu, angeführt von Technologiewerten wie Infineon und ABB.",
+  "tags": ["Börse", "Nvidia", "Jensen Huang", "Nasdaq", "SMI", "DAX", "Wall Street", "Aktien"]
+}
