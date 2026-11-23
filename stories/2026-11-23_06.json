@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-23",
+  "edition": "06",
+  "mood": "flat",
+  "ticker": [
+    [
+      "S&P-Fut.",
+      "",
+      2.1
+    ],
+    [
+      "Dow-Fut.",
+      "",
+      1.41
+    ],
+    [
+      "Nasdaq",
+      "22 617,7",
+      -5.3
+    ],
+    [
+      "SMI",
+      "14 572,1",
+      -1.0
+    ],
+    [
+      "Hang Seng",
+      "",
+      -1.5
+    ],
+    [
+      "Bitcoin",
+      "60 760,30 $",
+      1.93
+    ],
+    [
+      "Ether",
+      "1 704,82 $",
+      1.76
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow": "Dau",
+    "S&P": "S und P",
+    "SMI": "S M I",
+    "SK Hynix": "S K Heinix"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "US-Futures deuten *Erholung* an",
+      "source": "**CNBC, Fortune** · So, 19:13 Uhr ET",
+      "lines": [
+        {
+          "cap": "Guten Morgen. Nach der schwächsten Börsenwoche seit 2020 deuten die US-Futures auf eine Erholung.",
+          "tts": "Guten Morgen. Nach der schwächsten Börsenwoche seit zweitausendzwanzig deuten die U S Futures auf eine Erholung."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 2.1,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**S&P 500 Futures** · So, 19:13 Uhr ET"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Futures nach dem *Ausverkauf* im Plus",
+      "source": "**CNBC, Fortune** · So, 19:13 Uhr ET",
+      "lines": [
+        {
+          "cap": "Am Freitag schloss der Nasdaq 5,3 Prozent tiefer, belastet von Chipwerten.",
+          "tts": "Am Freitag schloss der Nasdaq fünf Komma drei Prozent tiefer, belastet von Chipwerten."
+        },
+        {
+          "cap": "Am Sonntagabend steigen die Futures auf den S&P 500 um 2,1 Prozent.",
+          "tts": "Am Sonntagabend steigen die Futures auf den S und P fünfhundert um zwei Komma eins Prozent."
+        },
+        {
+          "cap": "Die Nasdaq-Futures legen 2,9 Prozent zu, der Dow-Future gewinnt 684 Punkte.",
+          "tts": "Die Nasdaq Futures legen zwei Komma neun Prozent zu, der Dow Future gewinnt sechshundertvierundachtzig Punkte."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "Nasdaq",
+          "sub": "Composite · Schluss Fr",
+          "from": 23879.2,
+          "to": 22617.73,
+          "dec": 1,
+          "pct": -5.3,
+          "abs": -1261.47
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "US-Futures",
+          "rows": [
+            [
+              "S&P 500",
+              2.1
+            ],
+            [
+              "Nasdaq",
+              2.89
+            ],
+            [
+              "Dow",
+              1.41
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Kospi fällt über *5 Prozent*",
+      "source": "**Handelsblatt** · Mo, 04:59 Uhr",
+      "lines": [
+        {
+          "cap": "In Seoul fällt der Kospi zeitweise um mehr als 5 Prozent, Samsung verliert 4,6 Prozent.",
+          "tts": "In Seoul fällt der Kospi zeitweise um mehr als fünf Prozent, Samsung verliert vier Komma sechs Prozent."
+        },
+        {
+          "cap": "Hang Seng und Shanghai geben je 1,5 Prozent nach, Tokio hat Feiertag.",
+          "tts": "Hang Seng und Schanghai geben je eins Komma fünf Prozent nach. Tokio hat Feiertag."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "Asien heute früh",
+          "rows": [
+            [
+              "Samsung",
+              -4.6
+            ],
+            [
+              "SK Hynix",
+              -4.1
+            ],
+            [
+              "Hang Seng",
+              -1.5
+            ],
+            [
+              "Shanghai",
+              -1.5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "SMI startet nach *Verlustwoche*",
+      "source": "**SIX** · Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI schloss am Freitag 1,0 Prozent tiefer bei 14 572 Punkten.",
+          "tts": "Der SMI schloss am Freitag eins Komma null Prozent tiefer, bei vierzehntausendfünfhundertzweiundsiebzig Punkten."
+        },
+        {
+          "cap": "Heute ab 9.30 Uhr folgen Einkaufsmanager-Daten aus Deutschland und der Eurozone.",
+          "tts": "Heute ab neun Uhr dreissig folgen Einkaufsmanager Daten aus Deutschland und der Eurozone."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "SMI",
+          "sub": "Swiss Market Index",
+          "from": 14721.84,
+          "to": 14572.1,
+          "dec": 1,
+          "pct": -1.0,
+          "abs": -149.74
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "Futures *steigen*, Asien bleibt schwach",
+      "source": "**CNBC, Fortune, Handelsblatt** · Mo, 05:00 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Die US-Futures steigen, Asiens Chipwerte fallen.",
+          "tts": "Fazit: Die U S Futures steigen, Asiens Chipwerte fallen."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 2.9,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Nasdaq Futures** · So, 19:13 Uhr ET"
+        }
+      ]
+    }
+  ],
+  "title": "US-Futures deuten Erholung an, Kospi fällt über 5 % | Börse am Morgen 23.11.",
+  "description": "Nach der schwächsten Woche seit 2020 steigen die US-Futures am Sonntagabend deutlich, die S&P-500-Futures um 2,1 Prozent. In Asien geht der Ausverkauf bei Chipwerten weiter: Der Kospi fällt zeitweise über 5 Prozent, Tokio bleibt wegen eines Feiertags geschlossen.",
+  "tags": [
+    "Börse",
+    "Aktien",
+    "SMI",
+    "Nasdaq",
+    "Futures",
+    "Kospi",
+    "Hang Seng",
+    "Chipwerte"
+  ]
+}
