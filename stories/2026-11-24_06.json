@@ -1,0 +1,241 @@
+{
+  "date": "2026-11-24",
+  "edition": "06",
+  "mood": "up",
+  "ticker": [
+    [
+      "Kospi",
+      "5 014,4",
+      6.5
+    ],
+    [
+      "Nikkei",
+      "58 654,4",
+      3.9
+    ],
+    [
+      "Nasdaq",
+      "24 089,6",
+      6.5
+    ],
+    [
+      "Dow",
+      "49 595,3",
+      3.0
+    ],
+    [
+      "SMI",
+      "14 735,6",
+      1.1
+    ],
+    [
+      "DAX",
+      "",
+      2.2
+    ],
+    [
+      "EUR/CHF",
+      "0,9181",
+      -0.3
+    ],
+    [
+      "Brent",
+      "86,27 $",
+      -0.5
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "Dow Jones": "Dau Dschouns",
+    "Nvidia": "Envidia",
+    "Jensen Huang": "Dschensen Huang",
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "SK Hynix": "S K Heinix",
+    "TSMC": "T S M C",
+    "Ifo": "Ifo"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Asiens Börsen ziehen *kräftig* an",
+      "source": "**AP, Börse Seoul** · Stand Di, 04:30 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Morgen. Nach der Erholung an der Wall Street ziehen heute früh auch die Börsen in Asien kräftig an."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 6.5,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Kospi** · Di früh"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Kospi steigt *6,5 %*, Nikkei 3,9 %",
+      "source": "**AP, Börse Tokio** · Stand Di, 04:30 Uhr",
+      "lines": [
+        {
+          "cap": "Der Kospi in Seoul steigt im frühen Handel um 6,5 Prozent, der Nikkei in Tokio um 3,9 Prozent.",
+          "tts": "Der Kospi in Seoul steigt im frühen Handel um sechs Komma fünf Prozent, der Nikkei in Tokio um drei Komma neun Prozent."
+        },
+        {
+          "cap": "In Taiwan legt der Taiex mehr als 9 Prozent zu, Chipwerte wie TSMC gewinnen fast 10 Prozent.",
+          "tts": "In Taiwan legt der Taiex mehr als neun Prozent zu, Chipwerte wie TSMC gewinnen fast zehn Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "Asien, Di früh",
+          "rows": [
+            [
+              "Kospi",
+              6.5
+            ],
+            [
+              "Nikkei",
+              3.9
+            ],
+            [
+              "Shanghai",
+              0.7
+            ],
+            [
+              "Hang Seng",
+              0.2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Nasdaq mit *bestem Tag* seit April 2025",
+      "source": "**Nasdaq, NYSE, AP** · Schluss Mo, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Gestern Abend schliesst der Nasdaq 6,5 Prozent höher, der Dow Jones gewinnt 3,0 Prozent.",
+          "tts": "Gestern Abend schliesst der Nasdaq sechs Komma fünf Prozent höher, der Dow Jones gewinnt drei Prozent."
+        },
+        {
+          "cap": "Auslöser ist die Rückkehr von Jensen Huang an die Spitze von Nvidia, die Aktie steigt um 31,5 Prozent.",
+          "tts": "Auslöser ist die Rückkehr von Jensen Huang an die Spitze von Nvidia, die Aktie steigt um einunddreissig Komma fünf Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "Nasdaq",
+          "sub": "Nasdaq Composite",
+          "from": 22617.74,
+          "to": 24089.56,
+          "dec": 1,
+          "pct": 6.5,
+          "abs": 1471.82
+        },
+        {
+          "kind": "kennzahl",
+          "at": 1,
+          "value": 31.5,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Nvidia** · Schluss Mo"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI schliesst *1,1 %* höher",
+      "source": "**SIX, Xetra, AWP** · Schluss Mo, 17:30 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI schliesst gestern 1,1 Prozent höher, angeführt von ABB mit plus 4,6 Prozent.",
+          "tts": "Der SMI schliesst gestern eins Komma eins Prozent höher, angeführt von A B B mit plus vier Komma sechs Prozent."
+        },
+        {
+          "cap": "Der DAX gewinnt 2,2 Prozent, die US-Futures notieren heute früh leicht höher.",
+          "tts": "Der DAX gewinnt zwei Komma zwei Prozent, die U S Futures notieren heute früh leicht höher."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "SMI",
+          "sub": "Swiss Market Index",
+          "from": 14572.14,
+          "to": 14735.64,
+          "dec": 1,
+          "pct": 1.1,
+          "abs": 163.5
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Leitindizes, Schluss Mo",
+          "rows": [
+            [
+              "DAX",
+              2.15
+            ],
+            [
+              "SMI",
+              1.12
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Erholung erreicht *Asien*",
+      "source": "**AP, Börse Tokio** · Stand Di, 04:30 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Die Erholung erreicht Asien, heute folgt das Ifo-Geschäftsklima.",
+          "tts": "Fazit: Die Erholung erreicht Asien. Heute folgt das Ifo Geschäftsklima."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 3.9,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Nikkei 225** · Di früh"
+        }
+      ]
+    }
+  ],
+  "title": "Asien zieht nach, Kospi +6,5 %, Nikkei +3,9 % | Börse am Morgen 24.11.",
+  "description": "Nach dem besten Tag der Nasdaq seit April 2025 steigen heute früh auch die Börsen in Asien kräftig: Kospi +6,5 %, Nikkei +3,9 %, Taiex über 9 %. Der SMI hatte am Montag 1,1 % höher geschlossen, der DAX 2,2 %.",
+  "tags": [
+    "Börse",
+    "Asien",
+    "Nikkei",
+    "Kospi",
+    "Nasdaq",
+    "Nvidia",
+    "SMI",
+    "DAX"
+  ]
+}
