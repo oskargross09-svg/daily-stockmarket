@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-24",
+  "edition": "24",
+  "mood": "flat",
+  "ticker": [
+    ["Dow", "50 018,7", 0.9],
+    ["S&P 500", "7 201,1", -0.5],
+    ["Nasdaq", "23 733,5", -1.5],
+    ["Nvidia", "155,38 $", -5.9],
+    ["HP nachb.", "29,96 $", 7.2],
+    ["Bitcoin", "59 742 $", -2.4]
+  ],
+  "say": {"Nasdaq": "Nasdäk", "Dow Jones": "Dau Dschouns", "Nvidia": "En-Vidia", "Fed": "Fedd", "Kevin Warsh": "Kevin Worsch", "HP": "H P", "PCE": "P C E"},
+  "scenes": [
+    {
+      "type": "hook", "dir": "up",
+      "headline": "Dow Jones zurück über *50 000*",
+      "source": "**NYSE, Reuters** · Schluss Di, 22:00 Uhr",
+      "lines": [
+        {"cap": "Guten Abend. Der Dow Jones schliesst wieder über 50 000 Punkten, die Tech-Werte fallen.",
+         "tts": "Guten Abend. Der Dow Jones schliesst wieder über fünfzigtausend Punkten, die Tech-Werte fallen."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 0.9, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**Dow Jones** · Schluss Di, 24.11."}
+      ]
+    },
+    {
+      "type": "news", "dir": "flat",
+      "headline": "Wall Street *geteilt*",
+      "source": "**NYSE, Nasdaq, Reuters** · Schluss Di, 22:00 Uhr",
+      "lines": [
+        {"cap": "Der Dow Jones gewinnt 0,9 Prozent auf 50 018 Punkte.",
+         "tts": "Der Dow Jones gewinnt null Komma neun Prozent, auf fünfzigtausend achtzehn Punkte."},
+        {"cap": "Der S&P 500 verliert 0,5 Prozent, die Nasdaq 1,5 Prozent.",
+         "tts": "Der S und P fünfhundert verliert null Komma fünf Prozent, die Nasdaq eins Komma fünf Prozent."},
+        {"cap": "Nvidia schliesst 5,9 Prozent tiefer und gibt einen Teil der Montagsgewinne ab.",
+         "tts": "Nvidia schliesst fünf Komma neun Prozent tiefer, und gibt einen Teil der Montagsgewinne ab."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Dow Jones", "sub": "Industrial Average · Schluss", "from": 49595.31, "to": 50018.70, "dec": 1, "pct": 0.9, "abs": 423.39},
+        {"kind": "bars", "at": 1, "title": "Schluss Wall Street", "rows": [["Dow", 0.85], ["S&P 500", -0.50], ["Nasdaq", -1.48], ["Nvidia", -5.86]]}
+      ]
+    },
+    {
+      "type": "news", "dir": "up",
+      "headline": "HP steigt nachbörslich um *7 %*",
+      "source": "**Seeking Alpha, GuruFocus** · Di, 22:28 Uhr",
+      "lines": [
+        {"cap": "HP Inc. steigt nach Quartalszahlen nachbörslich rund 7 Prozent.",
+         "tts": "H P steigt nach Quartalszahlen nachbörslich rund sieben Prozent."},
+        {"cap": "Der Umsatz wächst um 9,3 Prozent auf 16,0 Milliarden Dollar.",
+         "tts": "Der Umsatz wächst um neun Komma drei Prozent, auf sechzehn Milliarden Dollar."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "HP Inc.", "sub": "NYSE · nachbörslich", "from": 27.94, "to": 29.96, "dec": 2, "unit": "$", "pct": 7.2, "abs": 2.02, "absUnit": "$", "absDec": 2}
+      ]
+    },
+    {
+      "type": "news", "dir": "politik",
+      "headline": "Märkte erwarten Zinserhöhung der *Fed*",
+      "source": "**Reuters, CME FedWatch** · Stand Di, 24.11.",
+      "lines": [
+        {"cap": "Händler rechnen mehrheitlich mit einer Zinserhöhung um 0,25 Prozentpunkte im Dezember.",
+         "tts": "Händler rechnen mehrheitlich mit einer Zinserhöhung um null Komma zwei fünf Prozentpunkte im Dezember."},
+        {"cap": "Die US-Notenbank entscheidet am 9. Dezember.",
+         "tts": "Die U S Notenbank entscheidet am neunten Dezember."},
+        {"cap": "Am Mittwoch folgen die PCE-Inflationsdaten.",
+         "tts": "Am Mittwoch folgen die P C E Inflationsdaten."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 0, "value": 0.25, "dec": 2, "unit": "", "sign": true, "color": "ink", "label": "**Fed** · erwarteter Zinsschritt, Prozentpunkte"}
+      ]
+    },
+    {
+      "type": "fazit", "dir": "flat",
+      "headline": "Standardwerte vorn, *Chips* hinten",
+      "source": "**NYSE, Nasdaq** · Schluss Di, 22:00 Uhr",
+      "lines": [
+        {"cap": "Fazit: Standardwerte steigen, Chipwerte geben nach – der Blick geht auf die Inflationsdaten."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -1.5, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**Nasdaq** · Schluss Di, 24.11."}
+      ]
+    }
+  ],
+  "title": "Dow zurück über 50 000, Nvidia fällt, HP steigt nachbörslich | Börse in der Nacht 24.11.",
+  "description": "Der Dow Jones schliesst wieder über 50 000 Punkten, während Chipwerte wie Nvidia die Nasdaq belasten. HP Inc. steigt nach Quartalszahlen nachbörslich, und die Märkte erwarten im Dezember eine Zinserhöhung der Fed.",
+  "tags": ["Börse", "Dow Jones", "Nasdaq", "Nvidia", "HP", "Fed", "Zinsen", "Wall Street"]
+}
