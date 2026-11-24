@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-24",
+  "edition": "18",
+  "mood": "down",
+  "ticker": [
+    ["DAX", "24 968,5", -1.5],
+    ["Nasdaq", "23 745,9", -1.4],
+    ["Dow", "49 494,6", -0.2],
+    ["Nvidia", "154,43 $", -6.4],
+    ["Infineon", "", -8.7],
+    ["Gold", "3 567,15 $", -1.9],
+    ["Brent", "86,84 $", -2.8]
+  ],
+  "say": {"Nasdaq": "Nasdäk", "Dow Jones": "Dau Dschouns", "Nvidia": "En-Vidia", "DAX": "Dax", "SMI": "S M I", "Conference Board": "Konferens Bord", "Infineon": "Infineon", "Salesforce": "Seilsforss", "Amgen": "Ämdschen", "Jensen Huang": "Dschensen Huang"},
+  "scenes": [
+    {
+      "type": "hook", "dir": "down",
+      "headline": "Nvidia-Euphorie *verfliegt*",
+      "source": "**Nasdaq, finanzen.ch** · Di, 16:28 Uhr",
+      "lines": [
+        {"cap": "Guten Abend. Einen Tag nach der Rekord-Rally verliert Nvidia wieder deutlich.",
+         "tts": "Guten Abend. Einen Tag nach der Rekord-Rally verliert Nvidia wieder deutlich."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -6.4, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**Nvidia** · Nasdaq, Di 16:28 Uhr"}
+      ]
+    },
+    {
+      "type": "news", "dir": "down",
+      "headline": "DAX rutscht unter *25 000* Punkte",
+      "source": "**Xetra, wallstreet-online, finanzen.ch** · Di, 17:06 Uhr",
+      "lines": [
+        {"cap": "Der DAX fällt gegen Handelsschluss 1,5 Prozent auf 24 968 Punkte.",
+         "tts": "Der DAX fällt gegen Handelsschluss eins Komma fünf Prozent, auf vierundzwanzigtausend neunhundertachtundsechzig Punkte."},
+        {"cap": "Chipwerte führen die Verlierer an: Infineon minus 8,7 Prozent, Siemens Energy minus 5,6 Prozent.",
+         "tts": "Chipwerte führen die Verlierer an. Infineon minus acht Komma sieben Prozent, Siemens Energy minus fünf Komma sechs Prozent."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 0, "value": -1.5, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**DAX** · Xetra, Di 17:06 Uhr"},
+        {"kind": "bars", "at": 1, "title": "DAX-Verlierer · 16:30 Uhr", "rows": [["Infineon", -8.74], ["Siemens Energy", -5.55], ["Hochtief", -3.76]]}
+      ]
+    },
+    {
+      "type": "news", "dir": "down",
+      "headline": "Wall Street startet *uneinheitlich*",
+      "source": "**NYSE, Nasdaq, Reuters** · Eröffnung Di, 15:30 Uhr",
+      "lines": [
+        {"cap": "Die Nasdaq eröffnet 1,4 Prozent tiefer, der S&P 500 verliert 0,9 Prozent.",
+         "tts": "Die Nasdaq eröffnet eins Komma vier Prozent tiefer, der S und P fünfhundert verliert null Komma neun Prozent."},
+        {"cap": "Der Dow Jones startet mit minus 0,2 Prozent und dreht dann ins Plus.",
+         "tts": "Der Dow Jones startet mit minus null Komma zwei Prozent, und dreht dann ins Plus."},
+        {"cap": "Salesforce und Amgen gewinnen je rund 3 Prozent.",
+         "tts": "Salesforce und Amgen gewinnen je rund drei Prozent."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Nasdaq", "sub": "Composite · Eröffnung", "from": 24089.56, "to": 23745.86, "dec": 1, "pct": -1.4, "abs": -343.7},
+        {"kind": "bars", "at": 1, "title": "Eröffnung Wall Street", "rows": [["Dow", -0.20], ["S&P 500", -0.90], ["Nasdaq", -1.43]]}
+      ]
+    },
+    {
+      "type": "news", "dir": "up",
+      "headline": "US-Konsumstimmung steigt auf *103,3*",
+      "source": "**Conference Board, Reuters** · Di, 16:00 Uhr",
+      "lines": [
+        {"cap": "Das Verbrauchervertrauen in den USA steigt im November auf 103,3 Punkte, nach 91,9 im Oktober.",
+         "tts": "Das Verbrauchervertrauen in den U S A steigt im November auf hundertdrei Komma drei Punkte, nach einundneunzig Komma neun im Oktober."},
+        {"cap": "Es ist der höchste Stand seit Januar 2025.",
+         "tts": "Es ist der höchste Stand seit Januar zweitausendfünfundzwanzig."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 0, "value": 103.3, "dec": 1, "unit": "", "sign": false, "color": "up", "label": "**Conference Board** · Verbrauchervertrauen Nov."}
+      ]
+    },
+    {
+      "type": "fazit", "dir": "down",
+      "headline": "Tech-Erholung ohne *Fortsetzung*",
+      "source": "**Xetra, Nasdaq** · Stand Di, 17:06 Uhr",
+      "lines": [
+        {"cap": "Fazit: Die Tech-Erholung vom Montag findet keine Fortsetzung."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -1.4, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**Nasdaq** · Eröffnung Di"}
+      ]
+    }
+  ],
+  "title": "Nvidia-Euphorie verfliegt, DAX unter 25 000 | Börse am Abend 24.11.",
+  "description": "Einen Tag nach der Rally verliert Nvidia wieder deutlich, Chipwerte ziehen den DAX unter 25 000 Punkte. Die Nasdaq eröffnet tiefer, während das US-Verbrauchervertrauen überraschend stark steigt.",
+  "tags": ["Börse", "Aktien", "DAX", "Nvidia", "Nasdaq", "Wall Street", "Infineon", "Verbrauchervertrauen"]
+}
