@@ -1,0 +1,235 @@
+{
+  "date": "2026-11-24",
+  "edition": "12",
+  "mood": "flat",
+  "ticker": [
+    [
+      "SMI",
+      "14 709",
+      -0.2
+    ],
+    [
+      "DAX",
+      "25 202",
+      -0.5
+    ],
+    [
+      "Swiss Re",
+      "",
+      0.9
+    ],
+    [
+      "Nestlé",
+      "",
+      0.7
+    ],
+    [
+      "Roche",
+      "",
+      -0.6
+    ],
+    [
+      "Novartis",
+      "",
+      -0.6
+    ],
+    [
+      "Sandoz",
+      "",
+      -1.0
+    ],
+    [
+      "Gold",
+      "3 619,95 $",
+      -0.3
+    ]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "Ifo": "Ifo",
+    "Nestlé": "Nestle",
+    "Giredestrant": "Dschiredestrant",
+    "Conference Board": "Konferens Bord",
+    "Dell": "Dell",
+    "HP": "H P"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "flat",
+      "headline": "Gewinnmitnahmen nach der *Rally*",
+      "source": "**AWP, cash.ch** · Stand Di, 10:15 Uhr",
+      "lines": [
+        {
+          "cap": "Nach der kräftigen Erholung vom Montag nehmen Anleger am Dienstagmittag Gewinne mit."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -0.2,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**SMI** · Di, 10:15 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Pharmawerte bremsen den *SMI*",
+      "source": "**SIX, AWP, cash.ch** · Stand Di, 10:15 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI notiert 0,2 Prozent tiefer bei 14 709 Punkten.",
+          "tts": "Der SMI notiert null Komma zwei Prozent tiefer bei vierzehntausendsiebenhundertneun Punkten."
+        },
+        {
+          "cap": "Roche und Novartis verlieren je 0,6 Prozent, Sandoz 1 Prozent.",
+          "tts": "Roche und Novartis verlieren je null Komma sechs Prozent, Sandoz ein Prozent."
+        },
+        {
+          "cap": "Bei Roche verpufft der Impuls einer weiteren US-Zulassung für Giredestrant.",
+          "tts": "Bei Roche verpufft der Impuls einer weiteren U S Zulassung für Giredestrant."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "SMI-Titel, Di 10:15 Uhr",
+          "rows": [
+            [
+              "Swiss Re",
+              0.9
+            ],
+            [
+              "Nestlé",
+              0.7
+            ],
+            [
+              "Roche",
+              -0.6
+            ],
+            [
+              "Sandoz",
+              -1.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Ifo-Index steigt auf *90,6* Punkte",
+      "source": "**Ifo-Institut, dpa-AFX, Xetra** · Di, 10:40 Uhr",
+      "lines": [
+        {
+          "cap": "Das Ifo-Geschäftsklima steigt im November auf 90,6 Punkte, den höchsten Stand seit Frühjahr 2023.",
+          "tts": "Das Ifo Geschäftsklima steigt im November auf neunzig Komma sechs Punkte, den höchsten Stand seit Frühjahr zweitausenddreiundzwanzig."
+        },
+        {
+          "cap": "Ifo-Präsident Clemens Fuest sagt: Die Erholung der deutschen Wirtschaft kommt voran.",
+          "tts": "Ifo Präsident Clemens Fuest sagt: Die Erholung der deutschen Wirtschaft kommt voran."
+        },
+        {
+          "cap": "Der DAX gibt dennoch 0,5 Prozent nach.",
+          "tts": "Der DAX gibt dennoch null Komma fünf Prozent nach."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "at": 0,
+          "value": 90.6,
+          "dec": 1,
+          "unit": "",
+          "sign": false,
+          "color": "up",
+          "label": "**Ifo-Geschäftsklima** · November"
+        },
+        {
+          "kind": "bars",
+          "at": 2,
+          "title": "Leitindizes, Di Vormittag",
+          "rows": [
+            [
+              "SMI",
+              -0.18
+            ],
+            [
+              "DAX",
+              -0.53
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "US-Daten und Zahlen von *Dell* und HP",
+      "source": "**Dow Jones Newswires, finanzen.ch** · Terminvorschau Di",
+      "lines": [
+        {
+          "cap": "Um 16 Uhr folgt in den USA das Verbrauchervertrauen des Conference Board, erwartet werden 92,2 Punkte.",
+          "tts": "Um sechzehn Uhr folgt in den U S A das Verbrauchervertrauen des Conference Board, erwartet werden zweiundneunzig Komma zwei Punkte."
+        },
+        {
+          "cap": "Am Abend legen Dell und HP ihre Quartalszahlen vor.",
+          "tts": "Am Abend legen Dell und H P ihre Quartalszahlen vor."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "at": 0,
+          "value": 92.2,
+          "dec": 1,
+          "unit": "",
+          "sign": false,
+          "color": "ink",
+          "label": "**Verbrauchervertrauen** · Prognose"
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "Konjunktur stützt, *Pharma* bremst",
+      "source": "**Ifo-Institut, SIX** · Stand Di, 10:15 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Das Ifo-Geschäftsklima stützt, Pharmawerte bremsen.",
+          "tts": "Fazit: Das Ifo Geschäftsklima stützt, Pharmawerte bremsen."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 90.6,
+          "dec": 1,
+          "unit": "",
+          "sign": false,
+          "color": "up",
+          "label": "**Ifo-Geschäftsklima** · November"
+        }
+      ]
+    }
+  ],
+  "title": "Gewinnmitnahmen, Ifo-Index auf 90,6 Punkten | Börse am Mittag 24.11.",
+  "description": "Nach der Erholungsrally vom Montag notiert der SMI am Dienstagmittag 0,2 % tiefer, Roche, Novartis und Sandoz geben nach. Das Ifo-Geschäftsklima steigt auf 90,6 Punkte, den höchsten Stand seit Frühjahr 2023. Am Nachmittag folgen US-Verbrauchervertrauen sowie Zahlen von Dell und HP.",
+  "tags": [
+    "Börse",
+    "SMI",
+    "DAX",
+    "Ifo",
+    "Roche",
+    "Novartis",
+    "Konjunktur"
+  ]
+}
