@@ -1,0 +1,243 @@
+{
+  "date": "2026-11-25",
+  "edition": "06",
+  "mood": "down",
+  "ticker": [
+    [
+      "Nikkei",
+      "56 710,4",
+      -3.3
+    ],
+    [
+      "Kospi",
+      "",
+      -5.5
+    ],
+    [
+      "SoftBank",
+      "",
+      -16.1
+    ],
+    [
+      "Nasdaq",
+      "23 733,5",
+      -1.5
+    ],
+    [
+      "SMI",
+      "14 733,9",
+      0.0
+    ],
+    [
+      "DAX",
+      "25 017,8",
+      -1.3
+    ],
+    [
+      "Gold",
+      "3 547,81 $",
+      -0.25
+    ]
+  ],
+  "say": {
+    "Nasdaq": "Nasdäk",
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "KI": "K I",
+    "SoftBank": "Softbänk",
+    "Advantest": "Ädväntest",
+    "Kospi": "Kospi",
+    "Taiex": "Tai-Ex",
+    "PCE": "P C E",
+    "Seoul": "Seul"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "Chipwerte ziehen *Asien* nach unten",
+      "source": "**Börse Tokio, Finimize** · Stand Mi, Mittag Tokio",
+      "lines": [
+        {
+          "cap": "Guten Morgen. Die Zweifel am KI-Boom sind zurück, Asiens Börsen fallen deutlich."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -3.3,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**Nikkei 225** · Mi, Mittag"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Nikkei fällt um *3,3 %*",
+      "source": "**Finimize, investingLive, Stock Analysis** · Stand Mi, Mittag",
+      "lines": [
+        {
+          "cap": "In Tokio verliert der Nikkei bis zum Mittag 3,3 Prozent auf 56 710 Punkte.",
+          "tts": "In Tokio verliert der Nikkei bis zum Mittag drei Komma drei Prozent, auf sechsundfünfzigtausend siebenhundertzehn Punkte."
+        },
+        {
+          "cap": "In Seoul fällt der Kospi 5,5 Prozent, in Taipeh der Taiex 7,6 Prozent.",
+          "tts": "In Seoul fällt der Kospi fünf Komma fünf Prozent, in Taipeh der Taiex sieben Komma sechs Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "Nikkei 225",
+          "sub": "Börse Tokio · Mittag",
+          "from": 58644.63,
+          "to": 56710.43,
+          "dec": 1,
+          "pct": -3.3,
+          "abs": -1934.2
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Asien · Mittwoch",
+          "rows": [
+            [
+              "Nikkei",
+              -3.3
+            ],
+            [
+              "Kospi",
+              -5.5
+            ],
+            [
+              "Taiex",
+              -7.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "SoftBank verliert *16 %*",
+      "source": "**Stock Analysis, Al Jazeera** · Stand Mi, Vormittag",
+      "lines": [
+        {
+          "cap": "Am stärksten fallen Chip- und KI-Werte: SoftBank minus 16,1 Prozent, Advantest minus 14,5 Prozent.",
+          "tts": "Am stärksten fallen Chip- und K I Werte. SoftBank minus sechzehn Komma eins Prozent, Advantest minus vierzehn Komma fünf Prozent."
+        },
+        {
+          "cap": "In Seoul verlieren Samsung und SK Hynix je rund 9 Prozent.",
+          "tts": "In Seoul verlieren Samsung und S K Hynix je rund neun Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "Asiens Chipwerte",
+          "rows": [
+            [
+              "SoftBank",
+              -16.1
+            ],
+            [
+              "Advantest",
+              -14.5
+            ],
+            [
+              "Tokyo Electron",
+              -13.7
+            ],
+            [
+              "Samsung",
+              -9.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "SMI stabil, DAX *schwächer*",
+      "source": "**SIX, Xetra** · Schluss Di, 17:30 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI schliesst am Dienstag praktisch unverändert bei 14 734 Punkten.",
+          "tts": "Der SMI schliesst am Dienstag praktisch unverändert, bei vierzehntausend siebenhundertvierunddreissig Punkten."
+        },
+        {
+          "cap": "Der DAX verliert 1,3 Prozent. Heute früh notieren die Nasdaq-Futures rund 1 Prozent tiefer.",
+          "tts": "Der DAX verliert eins Komma drei Prozent. Heute früh notieren die Nasdaq Futures rund ein Prozent tiefer."
+        },
+        {
+          "cap": "Am Nachmittag folgen die US-Inflationsdaten PCE.",
+          "tts": "Am Nachmittag folgen die U S Inflationsdaten P C E."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "Schluss Dienstag",
+          "rows": [
+            [
+              "SMI",
+              0.0
+            ],
+            [
+              "DAX",
+              -1.26
+            ],
+            [
+              "Nasdaq",
+              -1.48
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "down",
+      "headline": "*KI-Zweifel* treffen Asiens Chipwerte",
+      "source": "**Stock Analysis, Finimize** · Stand Mi, Vormittag",
+      "lines": [
+        {
+          "cap": "Fazit: Die KI-Zweifel kehren zurück und treffen vor allem Asiens Chipwerte.",
+          "tts": "Fazit: Die K I Zweifel kehren zurück, und treffen vor allem Asiens Chipwerte."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -16.1,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**SoftBank** · Mi, Vormittag"
+        }
+      ]
+    }
+  ],
+  "title": "KI-Zweifel: Nikkei fällt 3,3 %, SoftBank minus 16 % | Börse am Morgen 25.11.",
+  "description": "Asiens Börsen fallen am Mittwoch deutlich: Der Nikkei verliert bis zum Mittag 3,3 Prozent, der Kospi 5,5 Prozent, SoftBank und Advantest über 14 Prozent. Zweifel an den hohen KI-Ausgaben belasten Chipwerte, am Nachmittag folgen die US-Inflationsdaten.",
+  "tags": [
+    "Börse",
+    "Nikkei",
+    "Kospi",
+    "SoftBank",
+    "Chipwerte",
+    "SMI",
+    "DAX",
+    "KI"
+  ]
+}
