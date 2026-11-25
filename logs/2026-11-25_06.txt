@@ -1,0 +1,7 @@
+job: videos/2026-11-25_06.json
+run: 20261125T042312
+Fertig: https://youtu.be/iuBR10-249g
+Status: private
+VIDEO_ID=iuBR10-249g
+Veröffentlichung geplant: 2026-11-25T05:00:00Z
+rc=0
