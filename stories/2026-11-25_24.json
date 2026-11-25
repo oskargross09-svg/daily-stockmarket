@@ -1,0 +1,228 @@
+{
+  "date": "2026-11-25",
+  "edition": "24",
+  "mood": "up",
+  "ticker": [
+    [
+      "Dow",
+      "50 182,95",
+      0.33
+    ],
+    [
+      "S&P 500",
+      "7 182,78",
+      -0.25
+    ],
+    [
+      "Nasdaq",
+      "23 585,80",
+      -0.62
+    ],
+    [
+      "Nvidia",
+      "",
+      -3.91
+    ],
+    [
+      "Gold",
+      "3 549,95 $",
+      -0.18
+    ],
+    [
+      "Brent",
+      "94,43 $",
+      3.32
+    ],
+    [
+      "EUR/CHF",
+      "0,9120",
+      -0.47
+    ]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "Nasdaq": "Nasdäk",
+    "Dow Jones": "Dau Dschouns",
+    "Nvidia": "En-Vidia",
+    "AMD": "A M D",
+    "Micron": "Maikron",
+    "PCE": "P C E",
+    "Thanksgiving": "Thänksgiving"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Dow macht *1100 Punkte* Minus wett",
+      "source": "**NYSE, CNBC** · Schluss Mi, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Abend. Der Dow Jones macht einen Verlust von mehr als 1100 Punkten wett und schliesst im Plus.",
+          "tts": "Guten Abend. Der Dow Jones macht einen Verlust von mehr als elfhundert Punkten wett, und schliesst im Plus."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 0.3,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Dow Jones** · Schluss Mi"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Nasdaq begrenzt Verlust auf *0,6 %*",
+      "source": "**NYSE, Nasdaq, Reuters** · Schluss Mi, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Der Dow Jones schliesst 0,3 Prozent höher bei 50 182,95 Punkten.",
+          "tts": "Der Dow Jones schliesst null Komma drei Prozent höher, bei fünfzigtausend hundertzweiundachtzig Punkten."
+        },
+        {
+          "cap": "Die Nasdaq liegt am Morgen zeitweise mehr als 4 Prozent im Minus und schliesst 0,6 Prozent tiefer.",
+          "tts": "Die Nasdaq liegt am Morgen zeitweise mehr als vier Prozent im Minus, und schliesst null Komma sechs Prozent tiefer."
+        },
+        {
+          "cap": "Der S&P 500 verliert 0,3 Prozent.",
+          "tts": "Der S und P fünfhundert verliert null Komma drei Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "Dow Jones",
+          "sub": "Dow Jones Industrial Average",
+          "from": 50018.7,
+          "to": 50182.95,
+          "dec": 1,
+          "pct": 0.3,
+          "abs": 164.25
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Wall Street · Schluss Mi",
+          "rows": [
+            [
+              "Dow",
+              0.33
+            ],
+            [
+              "S&P 500",
+              -0.25
+            ],
+            [
+              "Nasdaq",
+              -0.62
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Chipwerte bleiben *unter Druck*",
+      "source": "**Nasdaq, Fox Business** · Schluss Mi, 22:00 Uhr",
+      "lines": [
+        {
+          "cap": "Nvidia verliert 3,9 Prozent, Micron 4,6 Prozent und AMD 1,8 Prozent.",
+          "tts": "Nvidia verliert drei Komma neun Prozent, Micron vier Komma sechs Prozent, und AMD eins Komma acht Prozent."
+        },
+        {
+          "cap": "Am Morgen lag Nvidia noch 8,6 Prozent im Minus.",
+          "tts": "Am Morgen lag Nvidia noch acht Komma sechs Prozent im Minus."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "US-Chipwerte · Schluss Mi",
+          "rows": [
+            [
+              "Micron",
+              -4.57
+            ],
+            [
+              "Nvidia",
+              -3.91
+            ],
+            [
+              "AMD",
+              -1.75
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "Fed vor *Zinserhöhung* im Dezember",
+      "source": "**US-Handelsministerium, Reuters** · PCE Okt.",
+      "lines": [
+        {
+          "cap": "Die Kerninflation nach PCE steigt im Oktober auf 3,3 Prozent, den höchsten Stand seit November 2023.",
+          "tts": "Die Kerninflation nach P C E steigt im Oktober auf drei Komma drei Prozent, den höchsten Stand seit November zweitausenddreiundzwanzig."
+        },
+        {
+          "cap": "Die Märkte rechnen deshalb mit einer Zinserhöhung der US-Notenbank im Dezember.",
+          "tts": "Die Märkte rechnen deshalb mit einer Zinserhöhung der U S Notenbank im Dezember."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 3.3,
+          "dec": 1,
+          "unit": "%",
+          "sign": false,
+          "color": "down",
+          "label": "**Kern-PCE** · Oktober"
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "US-Börse ruht an *Thanksgiving*",
+      "source": "**NYSE** · Thanksgiving, Do 26.11.",
+      "lines": [
+        {
+          "cap": "Fazit: Die Wall Street erholt sich. Am Donnerstag ruht die US-Börse wegen Thanksgiving.",
+          "tts": "Fazit: Die Wall Street erholt sich. Am Donnerstag ruht die U S Börse wegen Thanksgiving."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": -0.6,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**Nasdaq Composite** · Schluss Mi"
+        }
+      ]
+    }
+  ],
+  "title": "Dow macht 1100-Punkte-Minus wett, Chipwerte schwach | Börse in der Nacht 25.11.",
+  "description": "Der Dow Jones holt einen Verlust von mehr als 1100 Punkten auf und schliesst 0,3 Prozent höher, die Nasdaq begrenzt ihr Minus auf 0,6 Prozent. Chipwerte wie Nvidia bleiben schwach, und nach der hohen PCE-Inflation rechnen die Märkte mit einer Zinserhöhung der Fed im Dezember.",
+  "tags": [
+    "Börse",
+    "Dow Jones",
+    "Nasdaq",
+    "Wall Street",
+    "Nvidia",
+    "Fed",
+    "PCE",
+    "Thanksgiving"
+  ]
+}
