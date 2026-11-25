@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-25",
+  "edition": "12",
+  "mood": "up",
+  "ticker": [
+    ["SMI", "14 860,5", 0.9],
+    ["AMS Osram", "", 15.7],
+    ["Swatch", "", 6.2],
+    ["Richemont", "", 2.1],
+    ["UBS", "", 1.1],
+    ["Gold", "3 534,95 $", -0.6],
+    ["Bitcoin", "59 164,32 $", -0.91]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "UBS": "U B S",
+    "PCE": "P C E",
+    "AMS Osram": "A M S Osram",
+    "Swatch": "Swotsch",
+    "Richemont": "Rischmong"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Der *SMI* erholt sich am Mittag",
+      "source": "**SIX, cash.ch** · Stand Mi, 11:15 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Tag. Die Schweizer Börse steigt am Mittwoch deutlich, getragen von Analysten-Hochstufungen.",
+          "tts": "Guten Tag. Die Schweizer Börse steigt am Mittwoch deutlich, getragen von Analysten Hochstufungen."
+        }
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 0.9, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**SMI** · Mi, 11:15 Uhr"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI steigt auf *14 860* Punkte",
+      "source": "**SIX, cash.ch** · Stand Mi, 11:15 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI notiert kurz nach 11 Uhr 0,9 Prozent höher bei 14 860 Punkten.",
+          "tts": "Der SMI notiert kurz nach elf Uhr null Komma neun Prozent höher, bei vierzehntausendachthundertsechzig Punkten."
+        },
+        {
+          "cap": "Der DAX bewegt sich dagegen kaum und pendelt um 25 000 Punkte.",
+          "tts": "Der DAX bewegt sich dagegen kaum, und pendelt um fünfundzwanzigtausend Punkte."
+        }
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "SMI", "sub": "Swiss Market Index", "from": 14733.89, "to": 14860.50, "dec": 1, "pct": 0.9, "abs": 126.61}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Swatch nach Hochstufung *+6,2 %*",
+      "source": "**SIX, cash.ch** · Stand Mi, 11:15 Uhr",
+      "lines": [
+        {
+          "cap": "Swatch steigt 6,2 Prozent. Die UBS stuft die Aktie von Verkaufen auf Neutral hoch.",
+          "tts": "Swatch steigt sechs Komma zwei Prozent. Die UBS stuft die Aktie von Verkaufen auf Neutral hoch."
+        },
+        {
+          "cap": "Richemont gewinnt 2,1 Prozent, die UBS-Aktie 1,1 Prozent.",
+          "tts": "Richemont gewinnt zwei Komma eins Prozent, die UBS Aktie eins Komma eins Prozent."
+        }
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "SMI-Titel · Mi", "rows": [["Swatch", 6.2], ["Richemont", 2.1], ["UBS", 1.1], ["SMI", 0.86]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Samsung steigt bei *AMS Osram* ein",
+      "source": "**SIX, cash.ch, Handelsblatt** · Stand Mi, 11:15 Uhr",
+      "lines": [
+        {
+          "cap": "AMS Osram springt 15,7 Prozent nach oben.",
+          "tts": "A M S Osram springt fünfzehn Komma sieben Prozent nach oben."
+        },
+        {
+          "cap": "Der Konzern vereinbart eine Partnerschaft mit Samsung Display, eine Samsung-Tochter investiert 210 Millionen Euro.",
+          "tts": "Der Konzern vereinbart eine Partnerschaft mit Samsung Display. Eine Samsung Tochter investiert zweihundertzehn Millionen Euro."
+        }
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 0, "value": 15.7, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**AMS Osram** · Mi, 11:15 Uhr"}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "Um 14:30 Uhr folgen die *PCE-Daten*",
+      "source": "**finanzen.net, cash.ch** · Terminvorschau Mi",
+      "lines": [
+        {
+          "cap": "Fazit: Hochstufungen stützen den SMI. Um 14.30 Uhr folgen die US-Inflationsdaten PCE, erwartet werden 3,8 Prozent.",
+          "tts": "Fazit: Hochstufungen stützen den SMI. Um vierzehn Uhr dreissig folgen die U S Inflationsdaten P C E. Erwartet werden drei Komma acht Prozent."
+        }
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 3.8, "dec": 1, "unit": "%", "sign": false, "color": "ink", "label": "**PCE-Inflation** · Prognose Okt."}
+      ]
+    }
+  ],
+  "title": "SMI steigt 0,9 %, AMS Osram springt nach Samsung-Einstieg | Börse am Mittag 25.11.",
+  "description": "Der SMI steigt bis Mittag um 0,9 Prozent, Swatch gewinnt nach einer Hochstufung durch die UBS 6,2 Prozent. AMS Osram springt nach einer Partnerschaft mit Samsung Display zweistellig, am Nachmittag folgen die US-Inflationsdaten PCE.",
+  "tags": ["Börse", "SMI", "Swatch", "AMS Osram", "Samsung", "Richemont", "PCE", "DAX"]
+}
