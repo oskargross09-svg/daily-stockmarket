@@ -1,0 +1,218 @@
+{
+  "date": "2026-11-26",
+  "edition": "06",
+  "mood": "up",
+  "ticker": [
+    [
+      "SMI",
+      "14 664,9",
+      -0.47
+    ],
+    [
+      "DAX",
+      "24 702,1",
+      -1.26
+    ],
+    [
+      "Dow",
+      "50 183,0",
+      0.33
+    ],
+    [
+      "Nasdaq",
+      "23 585,8",
+      -0.62
+    ],
+    [
+      "Nikkei",
+      "",
+      1.5
+    ],
+    [
+      "Hang Seng",
+      "",
+      2.2
+    ],
+    [
+      "EUR/CHF",
+      "0,9123",
+      -0.4
+    ],
+    [
+      "USD/CHF",
+      "0,8309",
+      -0.51
+    ]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "Nasdaq": "Nasdäk",
+    "Dow Jones": "Dau Dschouns",
+    "Dow": "Dau",
+    "Hang Seng": "Hang Seng",
+    "Nikkei": "Nikkei",
+    "Thanksgiving": "Thänksgiving",
+    "ABB": "A B B",
+    "Givaudan": "Schiwodan",
+    "EZB": "E Z B"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Asiens Börsen *erholen sich*",
+      "source": "**HKEX** · Stand Do, 04:00 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Morgen. Nach dem Ausverkauf vom Mittwoch erholen sich die Börsen in Asien deutlich."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 2.2,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Hang Seng** · Stand Do, 04:00 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Tokio und Hongkong *im Plus*",
+      "source": "**NYSE, Börse Tokio, HKEX** · Stand Do, 04:00 Uhr",
+      "lines": [
+        {
+          "cap": "Die Vorgabe aus New York ist gemischt: Der Dow Jones schliesst 0,3 Prozent höher, die Nasdaq 0,6 Prozent tiefer.",
+          "tts": "Die Vorgabe aus New York ist gemischt: Der Dow Jones schliesst null Komma drei Prozent höher, die Nasdaq null Komma sechs Prozent tiefer."
+        },
+        {
+          "cap": "In Tokio steigt der Nikkei bis zum Mittag um rund 1,5 Prozent.",
+          "tts": "In Tokio steigt der Nikkei bis zum Mittag um rund eins Komma fünf Prozent."
+        },
+        {
+          "cap": "Der Hang Seng in Hongkong legt 2,2 Prozent zu und beendet eine Serie von sieben Verlusttagen.",
+          "tts": "Der Hang Seng in Hongkong legt zwei Komma zwei Prozent zu, und beendet eine Serie von sieben Verlusttagen."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "Wall Street · Schluss Mi",
+          "rows": [
+            [
+              "Dow",
+              0.33
+            ],
+            [
+              "Nasdaq",
+              -0.62
+            ]
+          ]
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Asien · Stand Do früh",
+          "rows": [
+            [
+              "Nikkei",
+              1.5
+            ],
+            [
+              "Hang Seng",
+              2.2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "SMI schliesst *0,5 %* tiefer",
+      "source": "**SIX, Xetra** · Schluss Mi, 17:30 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI schliesst am Mittwoch 0,5 Prozent tiefer bei 14 664,9 Punkten.",
+          "tts": "Der SMI schliesst am Mittwoch null Komma fünf Prozent tiefer, bei vierzehntausend sechshundertvierundsechzig Punkten."
+        },
+        {
+          "cap": "Neue US-Zollpläne belasten, ABB verliert 3,2 Prozent, Givaudan 2,3 Prozent.",
+          "tts": "Neue U S Zollpläne belasten. ABB verliert drei Komma zwei Prozent, Givaudan zwei Komma drei Prozent."
+        },
+        {
+          "cap": "Der DAX fällt um 1,3 Prozent unter 25 000 Punkte.",
+          "tts": "Der DAX fällt um eins Komma drei Prozent, unter fünfundzwanzigtausend Punkte."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "SMI",
+          "sub": "Swiss Market Index",
+          "from": 14733.89,
+          "to": 14664.92,
+          "dec": 1,
+          "pct": -0.5,
+          "abs": -68.97,
+          "countDelay": 1.0
+        },
+        {
+          "kind": "bars",
+          "at": 2,
+          "title": "Europa · Schluss Mi",
+          "rows": [
+            [
+              "SMI",
+              -0.47
+            ],
+            [
+              "DAX",
+              -1.26
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "Wall Street ruht an *Thanksgiving*",
+      "source": "**NYSE** · Thanksgiving, Do 26.11.",
+      "lines": [
+        {
+          "cap": "Fazit: Asien erholt sich, die Wall Street ruht heute wegen Thanksgiving."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 1.5,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Nikkei 225** · Stand Do, Mittag"
+        }
+      ]
+    }
+  ],
+  "title": "Asiens Börsen erholen sich, SMI und DAX tiefer | Börse am Morgen 26.11.",
+  "description": "Nach dem Ausverkauf vom Mittwoch erholen sich die Börsen in Asien: Der Hang Seng steigt 2,2 Prozent, der Nikkei rund 1,5 Prozent. Der SMI schloss am Mittwoch 0,5 Prozent tiefer, der DAX fiel unter 25 000 Punkte. Die Wall Street ruht heute wegen Thanksgiving.",
+  "tags": [
+    "Börse",
+    "SMI",
+    "DAX",
+    "Nikkei",
+    "Hang Seng",
+    "Wall Street",
+    "Thanksgiving"
+  ]
+}
