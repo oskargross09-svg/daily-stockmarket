@@ -1,0 +1,229 @@
+{
+  "date": "2026-11-26",
+  "edition": "18",
+  "mood": "up",
+  "ticker": [
+    [
+      "SMI",
+      "14 834,3",
+      1.15
+    ],
+    [
+      "DAX",
+      "25 232",
+      2.1
+    ],
+    [
+      "EUR/CHF",
+      "0,9156",
+      0.4
+    ],
+    [
+      "USD/CHF",
+      "0,8339",
+      0.34
+    ],
+    [
+      "Gold",
+      "3 578 $",
+      -0.3
+    ],
+    [
+      "Brent",
+      "91,27 $",
+      0.45
+    ],
+    [
+      "Dow",
+      "50 182,9",
+      0.33
+    ]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "ABB": "A B B",
+    "Amrize": "Ämreis",
+    "Logitech": "Lodschitek",
+    "Sandoz": "Sandos",
+    "Galderma": "Galderma",
+    "Thanksgiving": "Thänksgiving",
+    "NYSE": "N Y S E",
+    "Rheinmetall": "Rheinmetall"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Europas Börsen *deutlich* im Plus",
+      "source": "**SIX, Xetra** · Stand Do, 16:00 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Abend. Europas Börsen liegen am Donnerstagnachmittag klar im Plus."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 2.1,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**DAX** · Do, 16:00 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "DAX hält sich über *25 000* Punkten",
+      "source": "**Xetra, SIX** · Stand Do, 16:00 Uhr",
+      "lines": [
+        {
+          "cap": "Der DAX steigt am Nachmittag um 2,1 Prozent auf 25 232 Punkte.",
+          "tts": "Der DAX steigt am Nachmittag um zwei Komma eins Prozent, auf fünfundzwanzigtausendzweihundertzweiunddreissig Punkte."
+        },
+        {
+          "cap": "Der SMI gewinnt 1,2 Prozent auf 14 834 Punkte.",
+          "tts": "Der SMI gewinnt eins Komma zwei Prozent, auf vierzehntausendachthundertvierunddreissig Punkte."
+        },
+        {
+          "cap": "Auslöser ist die Kehrtwende der US-Techwerte vom Mittwochabend.",
+          "tts": "Auslöser ist die Kehrtwende der U S Techwerte vom Mittwochabend."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "DAX",
+          "sub": "Deutscher Aktienindex",
+          "from": 24702.13,
+          "to": 25232.0,
+          "dec": 1,
+          "pct": 2.1,
+          "abs": 529.87
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Leitindizes · Do",
+          "rows": [
+            [
+              "DAX",
+              2.1
+            ],
+            [
+              "SMI",
+              1.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Amrize und ABB *vorne*, Sandoz hinten",
+      "source": "**SIX** · Stand Do, 15:40 Uhr",
+      "lines": [
+        {
+          "cap": "Im SMI steigen Amrize um 3,2 Prozent, Logitech um 3,1 und ABB um 2,9 Prozent.",
+          "tts": "Im SMI steigen Amrize um drei Komma zwei Prozent, Logitech um drei Komma eins, und ABB um zwei Komma neun Prozent."
+        },
+        {
+          "cap": "Hinten liegen Sandoz und Galderma mit je 0,8 Prozent Minus.",
+          "tts": "Hinten liegen Sandoz und Galderma, mit je null Komma acht Prozent Minus."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "SMI-Titel · Do",
+          "rows": [
+            [
+              "Amrize",
+              3.21
+            ],
+            [
+              "Logitech",
+              3.05
+            ],
+            [
+              "ABB",
+              2.9
+            ],
+            [
+              "Sandoz",
+              -0.84
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Wall Street wegen *Thanksgiving* zu",
+      "source": "**NYSE** · Handelskalender Fr, 27.11.",
+      "lines": [
+        {
+          "cap": "Die US-Börsen bleiben heute wegen Thanksgiving geschlossen.",
+          "tts": "Die U S Börsen bleiben heute wegen Thanksgiving geschlossen."
+        },
+        {
+          "cap": "Am Freitag handelt die Wall Street nur bis 19 Uhr Schweizer Zeit.",
+          "tts": "Am Freitag handelt die Wall Street nur bis neunzehn Uhr Schweizer Zeit."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "at": 0,
+          "value": 19,
+          "dec": 0,
+          "unit": " Uhr",
+          "color": "ink",
+          "label": "**NYSE** · Handelsschluss Fr"
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Fazit: *Erholung* in Europa",
+      "source": "**SIX** · Stand Do, 16:00 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Der DAX macht den Verlust vom Mittwoch mehr als wett, die Wall Street ruht.",
+          "tts": "Fazit: Der DAX macht den Verlust vom Mittwoch mehr als wett. Die Wall Street ruht."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 1.2,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**SMI** · Do, 16:00 Uhr"
+        }
+      ]
+    }
+  ],
+  "title": "Europas Börsen deutlich im Plus, Wall Street ruht | Börse am Abend 26.11.",
+  "description": "Europas Börsen erholen sich vom Ausverkauf am Mittwoch: Der DAX steigt am Nachmittag über 25 200 Punkte, der SMI gewinnt 1,2 Prozent. Amrize, Logitech und ABB sind gesucht. Die Wall Street bleibt wegen Thanksgiving geschlossen und handelt am Freitag verkürzt.",
+  "tags": [
+    "Börse",
+    "SMI",
+    "DAX",
+    "Amrize",
+    "ABB",
+    "Logitech",
+    "Thanksgiving",
+    "Wall Street"
+  ]
+}
