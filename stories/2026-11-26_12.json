@@ -1,0 +1,224 @@
+{
+  "date": "2026-11-26",
+  "edition": "12",
+  "mood": "up",
+  "ticker": [
+    [
+      "SMI",
+      "14 818,8",
+      1.0
+    ],
+    [
+      "DAX",
+      "25 214,9",
+      2.08
+    ],
+    [
+      "Euro Stoxx 50",
+      "6 020,9",
+      2.2
+    ],
+    [
+      "EUR/CHF",
+      "0,9150",
+      0.31
+    ],
+    [
+      "USD/CHF",
+      "0,8329",
+      0.2
+    ],
+    [
+      "Gold",
+      "3 573,90 $",
+      -0.2
+    ],
+    [
+      "Brent",
+      "90,37 $",
+      -0.5
+    ],
+    [
+      "Bitcoin",
+      "60 855,82 $",
+      1.1
+    ]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "ABB": "A B B",
+    "EZB": "E Z B",
+    "Nestlé": "Nestleh",
+    "Logitech": "Lodschitek",
+    "Richemont": "Rischmong",
+    "Thanksgiving": "Thänksgiving",
+    "Euro Stoxx": "Euro Stocks"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Europas Börsen *erholen sich*",
+      "source": "**Xetra** · Stand Do, 10:45 Uhr",
+      "lines": [
+        {
+          "cap": "Guten Tag. Nach dem Ausverkauf vom Mittwoch erholen sich Europas Börsen auf breiter Front."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 2.1,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**DAX** · Do, 10:45 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "DAX wieder über *25 000* Punkten",
+      "source": "**Xetra, SIX** · Stand Do, 11:00 Uhr",
+      "lines": [
+        {
+          "cap": "Der DAX steigt am Vormittag um 2,1 Prozent auf 25 214,9 Punkte.",
+          "tts": "Der DAX steigt am Vormittag um zwei Komma eins Prozent, auf fünfundzwanzigtausendzweihundertvierzehn Punkte."
+        },
+        {
+          "cap": "Grund ist die Erholung der Tech-Werte an der Wall Street am Mittwochabend.",
+          "tts": "Grund ist die Erholung der Tech Werte an der Wall Street am Mittwochabend."
+        },
+        {
+          "cap": "Der SMI gewinnt 1,0 Prozent auf 14 818,8 Punkte.",
+          "tts": "Der SMI gewinnt eins Komma null Prozent, auf vierzehntausendachthundertachtzehn Punkte."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "DAX",
+          "sub": "Deutscher Aktienindex",
+          "from": 24702.13,
+          "to": 25214.94,
+          "dec": 1,
+          "pct": 2.1,
+          "abs": 512.81
+        },
+        {
+          "kind": "bars",
+          "at": 2,
+          "title": "Europa · Do",
+          "rows": [
+            [
+              "DAX",
+              2.08
+            ],
+            [
+              "Euro Stoxx 50",
+              2.2
+            ],
+            [
+              "SMI",
+              1.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Logitech und ABB *gesucht*",
+      "source": "**SIX, cash.ch** · Stand Do, 11:00 Uhr",
+      "lines": [
+        {
+          "cap": "Bei den Schweizer Blue Chips steigt Logitech 3,3 Prozent, ABB 2,7 Prozent.",
+          "tts": "Bei den Schweizer Blue Chips steigt Logitech drei Komma drei Prozent, ABB zwei Komma sieben Prozent."
+        },
+        {
+          "cap": "Richemont gewinnt 2,3 Prozent, Nestlé liegt 0,4 Prozent im Plus.",
+          "tts": "Richemont gewinnt zwei Komma drei Prozent, Nestlé liegt null Komma vier Prozent im Plus."
+        },
+        {
+          "cap": "Bachem fällt 9,7 Prozent. Die neuen Wachstumsziele liegen unter den Erwartungen.",
+          "tts": "Bachem fällt neun Komma sieben Prozent. Die neuen Wachstumsziele liegen unter den Erwartungen."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "SMI-Titel · Do",
+          "rows": [
+            [
+              "Logitech",
+              3.34
+            ],
+            [
+              "ABB",
+              2.71
+            ],
+            [
+              "Richemont",
+              2.32
+            ],
+            [
+              "Nestlé",
+              0.36
+            ]
+          ]
+        },
+        {
+          "kind": "kennzahl",
+          "at": 2,
+          "value": -9.7,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**Bachem** · Do, 11:00 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "Am Nachmittag: *EZB-Protokoll*",
+      "source": "**cash.ch, NYSE** · Terminvorschau Do",
+      "lines": [
+        {
+          "cap": "Fazit: Europa erholt sich, die Wall Street ruht. Heute folgt das Protokoll der EZB-Zinssitzung.",
+          "tts": "Fazit: Europa erholt sich, die Wall Street ruht. Heute folgt das Protokoll der E Z B Zinssitzung."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 2.2,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Euro Stoxx 50** · Do, 10:45 Uhr"
+        }
+      ]
+    }
+  ],
+  "title": "Europas Börsen erholen sich, DAX wieder über 25 000 | Börse am Mittag 26.11.",
+  "description": "Nach dem Ausverkauf vom Mittwoch erholen sich Europas Börsen: Der DAX steigt 2,1 Prozent über 25 000 Punkte, der SMI gewinnt 1,0 Prozent. Logitech und ABB sind gesucht, Bachem fällt nach neuen Wachstumszielen. Die Wall Street bleibt wegen Thanksgiving geschlossen.",
+  "tags": [
+    "Börse",
+    "SMI",
+    "DAX",
+    "Euro Stoxx 50",
+    "ABB",
+    "Logitech",
+    "Bachem",
+    "Thanksgiving"
+  ]
+}
