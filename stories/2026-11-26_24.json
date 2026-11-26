@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-26",
+  "edition": "24",
+  "mood": "politik",
+  "ticker": [
+    ["SMI", "14 817,7", 1.04],
+    ["DAX", "25 215,5", 2.08],
+    ["EUR/CHF", "0,9153", 0.34],
+    ["USD/CHF", "0,8338", 0.34],
+    ["Gold", "3 567 $", -0.61],
+    ["Brent", "96,57 $", 2.07],
+    ["Bitcoin", "60 590 $", 0.35]
+  ],
+  "say": {
+    "EZB": "E Z B",
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "DIW": "D I W",
+    "Hernández de Cos": "Ernandes de Kos",
+    "Philip Lane": "Filip Lein",
+    "Lagarde": "Lagard"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "politik",
+      "headline": "EZB-Protokoll deutet auf *Zinserhöhung*",
+      "source": "**EZB, Dow Jones** · Do, 26.11., 13:55 Uhr",
+      "lines": [
+        {"cap": "Guten Abend. Das Protokoll der EZB deutet auf eine weitere Zinserhöhung im Dezember hin."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 2.5, "dec": 1, "unit": "%", "color": "ink", "label": "**EZB** · Leitzins seit September"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "Zinsentscheid am *17. Dezember*",
+      "source": "**EZB, Dow Jones** · Do, 26.11., 13:55 Uhr",
+      "lines": [
+        {"cap": "Laut Protokoll hätten viele Ratsmitglieder schon im Oktober eine Erhöhung mitgetragen."},
+        {"cap": "Chefökonom Philip Lane schlug damals vor, die Zinsen unverändert zu lassen."},
+        {"cap": "Die Märkte rechnen am 17. Dezember mit einem Schritt um einen Viertelprozentpunkt.",
+         "tts": "Die Märkte rechnen am siebzehnten Dezember mit einem Schritt um einen Viertelprozentpunkt."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 0, "value": 17, "dec": 0, "unit": " Dez.", "color": "ink", "label": "**EZB** · nächste Zinssitzung"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "DIW erwartet *weitere* Zinsschritte",
+      "source": "**Reuters, dpa** · Do, 26.11., 16:38 Uhr",
+      "lines": [
+        {"cap": "DIW-Präsident Marcel Fratzscher erwartet im nächsten Jahr zwei bis drei Zinserhöhungen."},
+        {"cap": "Die EZB dürfe sich von hohen Staatsschulden nicht unter Druck setzen lassen."},
+        {"cap": "Neuer EZB-Präsident soll laut EU-Diplomaten der Spanier Pablo Hernández de Cos werden."}
+      ],
+      "objects": [
+        {"kind": "statement", "at": 0, "quote": "„Da muss die EZB einen klugen Weg finden, wie sie sich da nicht erpressen lässt.“", "who": "Marcel Fratzscher", "role": "Präsident DIW Berlin"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI schliesst *1,0 Prozent* höher",
+      "source": "**SIX, Xetra** · Schluss Do, 17:30 Uhr",
+      "lines": [
+        {"cap": "Der SMI schliesst 1,0 Prozent höher bei 14 817,7 Punkten.",
+         "tts": "Der SMI schliesst eins Komma null Prozent höher, bei vierzehntausendachthundertsiebzehn Punkten."},
+        {"cap": "Der DAX gewinnt 2,1 Prozent auf 25 215,5 Punkte.",
+         "tts": "Der DAX gewinnt zwei Komma eins Prozent, auf fünfundzwanzigtausendzweihundertfünfzehn Punkte."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "SMI", "sub": "Swiss Market Index", "from": 14664.92, "to": 14817.68, "dec": 1, "pct": 1.0, "abs": 152.76},
+        {"kind": "bars", "at": 1, "title": "Leitindizes · Schluss Do", "rows": [["DAX", 2.08], ["SMI", 1.04]]}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "politik",
+      "headline": "Fazit: EZB bleibt auf *Zinskurs*",
+      "source": "**Xetra** · Schluss Do, 17:30 Uhr",
+      "lines": [
+        {"cap": "Fazit: Die Börsen in Europa erholen sich, die EZB bereitet die nächste Zinserhöhung vor.",
+         "tts": "Fazit: Die Börsen in Europa erholen sich. Die EZB bereitet die nächste Zinserhöhung vor."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 2.1, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**DAX** · Schluss Do, 26.11."}
+      ]
+    }
+  ],
+  "title": "EZB-Protokoll deutet auf Zinserhöhung im Dezember | Börse in der Nacht 26.11.",
+  "description": "Das Protokoll der EZB-Oktobersitzung deutet auf eine weitere Zinserhöhung am 17. Dezember hin. Pablo Hernández de Cos soll laut EU-Diplomaten neuer EZB-Präsident werden. Der SMI schliesst 1,0 Prozent höher, der DAX gewinnt 2,1 Prozent.",
+  "tags": ["Börse", "EZB", "Zinsen", "SMI", "DAX", "Lagarde", "Geldpolitik"]
+}
