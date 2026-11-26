@@ -1,0 +1,6 @@
+job: videos/2026-11-26_18.json
+run: 20261126T165057
+Fertig: https://youtu.be/6OxkvTSCZXM
+Status: public
+VIDEO_ID=6OxkvTSCZXM
+rc=0
