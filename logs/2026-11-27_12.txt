@@ -1,0 +1,7 @@
+job: videos/2026-11-27_12.json
+run: 20261127T102534
+Fertig: https://youtu.be/qbGdBFBulkY
+Status: private
+VIDEO_ID=qbGdBFBulkY
+Veröffentlichung geplant: 2026-11-27T11:00:00Z
+rc=0
