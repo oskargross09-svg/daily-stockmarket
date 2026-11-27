@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-27",
+  "edition": "12",
+  "mood": "up",
+  "ticker": [
+    ["SMI", "14 846,3", 0.19],
+    ["DAX", "25 440", 0.9],
+    ["ABB", "66,70", 2.24],
+    ["Nestlé", "86,99", -0.75],
+    ["EUR/CHF", "0,9157", 0.03],
+    ["USD/CHF", "0,8340", 0.01],
+    ["Bitcoin", "61 619 $", 1.95]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "ABB": "A B B",
+    "JPMorgan": "Dschej Pi Morgan",
+    "Thanksgiving": "Thänksgiving",
+    "Black Friday": "Bläck Fraidei",
+    "Wall Street": "Wol Striet",
+    "Logitech": "Lodschitek",
+    "Infineon": "Infineon"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Tech-Werte ziehen den *DAX* nach oben",
+      "source": "**dpa-AFX** · Fr, 27.11., 10:14 Uhr",
+      "lines": [
+        {"cap": "Am Black Friday steigen Europas Börsen weiter, angeführt von Technologiewerten."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 0.9, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**DAX** · Fr, 27.11., Vormittag"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI nur *leicht* im Plus",
+      "source": "**finanzen.ch, AWP** · Fr, 27.11., 10:15 Uhr",
+      "lines": [
+        {"cap": "Der SMI notiert am Vormittag 0,2 Prozent höher bei 14 846 Punkten.",
+         "tts": "Der SMI notiert am Vormittag null Komma zwei Prozent höher, bei vierzehntausendachthundertsechsundvierzig Punkten."},
+        {"cap": "ABB und Logitech gewinnen je 2,2 Prozent.",
+         "tts": "ABB und Logitech gewinnen je zwei Komma zwei Prozent."},
+        {"cap": "Nestlé verliert 0,8 Prozent, auch Novartis und Roche geben nach.",
+         "tts": "Nestlé verliert null Komma acht Prozent, auch Novartis und Roche geben nach."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "SMI", "sub": "Swiss Market Index", "from": 14817.68, "to": 14846.30, "dec": 1, "pct": 0.2, "abs": 28.62},
+        {"kind": "bars", "at": 1, "title": "SMI-Titel · Fr, Vormittag", "rows": [["ABB", 2.24], ["Logitech", 2.23], ["Nestlé", -0.75]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Chipwerte gefragt, *Adidas* unter Druck",
+      "source": "**dpa-AFX, Handelsblatt** · Fr, 27.11., Vormittag",
+      "lines": [
+        {"cap": "Der DAX steigt nach der ersten Handelsstunde um 0,9 Prozent auf 25 440 Punkte.",
+         "tts": "Der DAX steigt nach der ersten Handelsstunde um null Komma neun Prozent, auf fünfundzwanzigtausendvierhundertvierzig Punkte."},
+        {"cap": "Gefragt sind Chipwerte wie Infineon."},
+        {"cap": "Adidas fällt um 2 Prozent, nachdem JPMorgan die Aktie herabgestuft hat.",
+         "tts": "Adidas fällt um zwei Prozent, nachdem JPMorgan die Aktie herabgestuft hat."}
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "Leitindizes · Fr, Vormittag", "rows": [["DAX", 0.9], ["SMI", 0.19]]},
+        {"kind": "kennzahl", "at": 2, "value": -2, "dec": 0, "unit": "%", "sign": true, "color": "down", "label": "**Adidas** · Fr, 27.11., Vormittag"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "Wall Street handelt nur bis *19 Uhr*",
+      "source": "**NYSE** · Handelszeiten Fr, 27.11.",
+      "lines": [
+        {"cap": "Die US-Futures zeigen nach Thanksgiving nach oben.",
+         "tts": "Die U S Futures zeigen nach Thanksgiving nach oben."},
+        {"cap": "Die New Yorker Börsen schliessen heute bereits um 19 Uhr Schweizer Zeit.",
+         "tts": "Die New Yorker Börsen schliessen heute bereits um neunzehn Uhr Schweizer Zeit."},
+        {"cap": "Der Black Friday gilt als Gradmesser für den US-Konsum.",
+         "tts": "Der Black Friday gilt als Gradmesser für den U S Konsum."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 1, "value": 19, "dec": 0, "unit": " Uhr", "color": "ink", "label": "**NYSE** · Handelsschluss Fr, Schweizer Zeit"}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Fazit: Technologie *führt*",
+      "source": "**finanzen.ch** · Fr, 27.11., 10:15 Uhr",
+      "lines": [
+        {"cap": "Fazit: Technologiewerte führen, die defensiven Schwergewichte bremsen den SMI."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 0.2, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**SMI** · Vormittag"}
+      ]
+    }
+  ],
+  "title": "Tech-Werte treiben den DAX, SMI nur leicht im Plus | Börse am Mittag 27.11.",
+  "description": "Am Black Friday legen Europas Börsen weiter zu, angeführt von Technologie- und Chipwerten. Der DAX steigt um 0,9 Prozent, der SMI wird von Nestlé, Novartis und Roche gebremst. Die Wall Street handelt heute nur bis 19 Uhr Schweizer Zeit.",
+  "tags": ["Börse", "SMI", "DAX", "ABB", "Adidas", "Wall Street", "Black Friday"]
+}
