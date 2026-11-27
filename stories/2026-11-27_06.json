@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-27",
+  "edition": "06",
+  "mood": "up",
+  "ticker": [
+    ["SMI", "14 817,7", 1.04],
+    ["DAX", "25 215,5", 2.08],
+    ["Nikkei", "57 919,3", 0.7],
+    ["Kospi", "4 812,7", 2.2],
+    ["Hang Seng", "22 310,1", 0.4],
+    ["EUR/CHF", "0,9153", 0.34],
+    ["USD/CHF", "0,8338", 0.34],
+    ["Gold", "3 566 $", -0.61]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "Nasdaq": "Nasdäk",
+    "Kospi": "Kospi",
+    "Hang Seng": "Hang Seng",
+    "Thanksgiving": "Thänksgiving",
+    "KI": "K I",
+    "Wall Street": "Wol Striet"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Asiens Börsen *steigen*, Wall Street ruht",
+      "source": "**AP** · Fr, 27.11., Handel am Morgen",
+      "lines": [
+        {"cap": "Guten Morgen. Die Börsen in Asien legen zu, die Wall Street war wegen Thanksgiving geschlossen."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 2.2, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**Kospi** · Fr, 27.11., Vormittag"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Chipwerte treiben *Seoul* und Tokio",
+      "source": "**AP** · Fr, 27.11., Handel am Morgen",
+      "lines": [
+        {"cap": "Der Kospi in Seoul steigt am Morgen um 2,2 Prozent.",
+         "tts": "Der Kospi in Seoul steigt am Morgen um zwei Komma zwei Prozent."},
+        {"cap": "Der Nikkei in Tokio gewinnt 0,7 Prozent, der Hang Seng in Hongkong 0,4 Prozent.",
+         "tts": "Der Nikkei in Tokio gewinnt null Komma sieben Prozent, der Hang Seng in Hongkong null Komma vier Prozent."},
+        {"cap": "Gefragt sind erneut Chip- und KI-Werte.",
+         "tts": "Gefragt sind erneut Chip und K I Werte."}
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "Asien · Fr, Vormittag", "rows": [["Kospi", 2.2], ["Nikkei", 0.7], ["Hang Seng", 0.4]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "New York handelt heute *verkürzt*",
+      "source": "**NYSE, Nasdaq** · Handelszeiten Fr, 27.11.",
+      "lines": [
+        {"cap": "Am Donnerstag blieben die New Yorker Börsen wegen Thanksgiving geschlossen."},
+        {"cap": "Heute wird nur bis 19 Uhr Schweizer Zeit gehandelt.",
+         "tts": "Heute wird nur bis neunzehn Uhr Schweizer Zeit gehandelt."},
+        {"cap": "Die US-Futures notieren am Morgen im Plus.",
+         "tts": "Die U S Futures notieren am Morgen im Plus."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 1, "value": 19, "dec": 0, "unit": " Uhr", "color": "ink", "label": "**NYSE** · Handelsschluss Fr, Schweizer Zeit"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI und DAX mit *Rückenwind*",
+      "source": "**SIX, Xetra** · Schluss Do, 17:30 Uhr",
+      "lines": [
+        {"cap": "Der SMI schloss am Donnerstag 1,0 Prozent höher bei 14 817,7 Punkten.",
+         "tts": "Der SMI schloss am Donnerstag eins Komma null Prozent höher, bei vierzehntausendachthundertsiebzehn Punkten."},
+        {"cap": "Der DAX gewann 2,1 Prozent auf 25 215,5 Punkte.",
+         "tts": "Der DAX gewann zwei Komma eins Prozent, auf fünfundzwanzigtausendzweihundertfünfzehn Punkte."},
+        {"cap": "Um 9:55 Uhr folgen die deutschen Arbeitsmarktzahlen.",
+         "tts": "Um neun Uhr fünfundfünfzig folgen die deutschen Arbeitsmarktzahlen."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "SMI", "sub": "Swiss Market Index", "from": 14664.92, "to": 14817.68, "dec": 1, "pct": 1.0, "abs": 152.76},
+        {"kind": "bars", "at": 1, "title": "Leitindizes · Schluss Do", "rows": [["DAX", 2.08], ["SMI", 1.04]]}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Fazit: Asien setzt *Erholung* fort",
+      "source": "**AP** · Fr, 27.11., Handel am Morgen",
+      "lines": [
+        {"cap": "Fazit: Asien setzt die Erholung fort, Europa startet nach Gewinnen am Donnerstag in den Freitag."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 0.7, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**Nikkei 225** · Fr, 27.11., Vormittag"}
+      ]
+    }
+  ],
+  "title": "Asiens Börsen steigen, Wall Street ruht an Thanksgiving | Börse am Morgen 27.11.",
+  "description": "Die Börsen in Asien legen zu, angeführt vom Kospi in Seoul mit 2,2 Prozent. Die Wall Street war an Thanksgiving geschlossen und handelt heute verkürzt. SMI und DAX gehen nach Gewinnen am Donnerstag in den Freitag.",
+  "tags": ["Börse", "Nikkei", "Kospi", "SMI", "DAX", "Wall Street", "Thanksgiving"]
+}
