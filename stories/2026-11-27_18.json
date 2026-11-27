@@ -1,0 +1,261 @@
+{
+  "date": "2026-11-27",
+  "edition": "18",
+  "mood": "up",
+  "ticker": [
+    [
+      "SMI",
+      "14 903,7",
+      0.58
+    ],
+    [
+      "DAX",
+      "25 437,9",
+      0.88
+    ],
+    [
+      "Dow Jones",
+      "50 563,5",
+      0.76
+    ],
+    [
+      "Gold",
+      "3 627,61 $",
+      1.69
+    ],
+    [
+      "Brent",
+      "89,97 $",
+      -1.77
+    ],
+    [
+      "Bitcoin",
+      "60 053,02 $",
+      -0.66
+    ],
+    [
+      "EUR/CHF",
+      "0,9145",
+      -0.08
+    ],
+    [
+      "USD/CHF",
+      "0,8361",
+      0.26
+    ]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "Black Friday": "Bläck Fraidei",
+    "Wall Street": "Wol Striet",
+    "UniCredit": "Unikredit",
+    "Dow Jones": "Dau Dschouns",
+    "Nasdaq": "Nasdäk",
+    "S&P 500": "S und P fünfhundert",
+    "Brent": "Brent"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Europas Börsen schliessen *fester*",
+      "source": "**cash.ch** · Fr, 27.11., 17:22 Uhr",
+      "lines": [
+        {
+          "cap": "Europas Börsen gehen am Black Friday mit Gewinnen ins Wochenende."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 0.9,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**DAX** · Fr, 27.11., 17:22 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI *0,6 %* höher, Pharma bremst",
+      "source": "**cash.ch, AWP** · Fr, 27.11., 17:22 Uhr",
+      "lines": [
+        {
+          "cap": "Der SMI steht kurz vor Handelsschluss 0,6 Prozent höher bei 14 904 Punkten.",
+          "tts": "Der SMI steht kurz vor Handelsschluss null Komma sechs Prozent höher, bei vierzehntausendneunhundertvier Punkten."
+        },
+        {
+          "cap": "Nestlé, Novartis und Roche bremsen den Leitindex."
+        },
+        {
+          "cap": "Ausserhalb des SMI steigt Dottikon nach Halbjahreszahlen um rund 10 Prozent.",
+          "tts": "Ausserhalb des SMI steigt Dottikon nach Halbjahreszahlen um rund zehn Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "SMI",
+          "sub": "Swiss Market Index",
+          "from": 14817.68,
+          "to": 14903.71,
+          "dec": 1,
+          "pct": 0.6,
+          "abs": 86.03
+        },
+        {
+          "kind": "kennzahl",
+          "at": 2,
+          "value": 10,
+          "dec": 0,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Dottikon** · Fr, 27.11., Vormittag"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "*Rheinmetall* gefragt, Commerzbank fällt",
+      "source": "**cash.ch, Dow Jones** · Fr, 27.11., 13:35–17:22 Uhr",
+      "lines": [
+        {
+          "cap": "Der DAX steigt um 0,9 Prozent auf 25 438 Punkte.",
+          "tts": "Der DAX steigt um null Komma neun Prozent, auf fünfundzwanzigtausendvierhundertachtunddreissig Punkte."
+        },
+        {
+          "cap": "Rheinmetall legt nach einem Auftrag aus Rumänien über 738 Millionen Euro zu.",
+          "tts": "Rheinmetall legt nach einem Auftrag aus Rumänien über siebenhundertachtunddreissig Millionen Euro zu."
+        },
+        {
+          "cap": "Die Commerzbank verliert, die Übernahmefantasie um UniCredit schwindet."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "quote",
+          "at": 0,
+          "name": "DAX",
+          "sub": "Deutscher Aktienindex",
+          "from": 25215.52,
+          "to": 25437.87,
+          "dec": 1,
+          "pct": 0.9,
+          "abs": 222.35
+        },
+        {
+          "kind": "kennzahl",
+          "at": 1,
+          "value": 3.2,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**Rheinmetall** · Fr, 13:35 Uhr"
+        },
+        {
+          "kind": "kennzahl",
+          "at": 2,
+          "value": -2.0,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "down",
+          "label": "**Commerzbank** · Fr, 13:35 Uhr"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Wall Street eröffnet *fester*",
+      "source": "**NYSE, Nasdaq, cash.ch** · Fr, 27.11., 15:44–17:37 Uhr",
+      "lines": [
+        {
+          "cap": "In New York eröffnen Dow Jones, S&P 500 und Nasdaq rund 0,8 Prozent höher.",
+          "tts": "In New York eröffnen Dow Jones, S&P 500 und Nasdaq rund null Komma acht Prozent höher."
+        },
+        {
+          "cap": "Gold steigt um 1,7 Prozent, Brent-Öl fällt um 1,8 Prozent.",
+          "tts": "Gold steigt um eins Komma sieben Prozent, Brent-Öl fällt um eins Komma acht Prozent."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "bars",
+          "at": 0,
+          "title": "US-Start · 15:44 Uhr",
+          "rows": [
+            [
+              "Dow Jones",
+              0.76
+            ],
+            [
+              "S&P 500",
+              0.77
+            ],
+            [
+              "Nasdaq",
+              0.73
+            ]
+          ]
+        },
+        {
+          "kind": "bars",
+          "at": 1,
+          "title": "Rohstoffe · 17:37 Uhr",
+          "rows": [
+            [
+              "Gold",
+              1.69
+            ],
+            [
+              "Brent",
+              -1.77
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Fazit: Gewinne zum *Wochenschluss*",
+      "source": "**cash.ch** · Fr, 27.11., 17:22 Uhr",
+      "lines": [
+        {
+          "cap": "Fazit: Zum Wochenschluss überwiegen die Gewinne, getragen von Tech- und Rüstungswerten."
+        }
+      ],
+      "objects": [
+        {
+          "kind": "kennzahl",
+          "value": 0.6,
+          "dec": 1,
+          "unit": "%",
+          "sign": true,
+          "color": "up",
+          "label": "**SMI** · Fr, 17:22 Uhr"
+        }
+      ]
+    }
+  ],
+  "title": "Europas Börsen mit Gewinnen ins Wochenende, Wall Street fester | Börse am Abend 27.11.",
+  "description": "Am Black Friday gehen SMI und DAX mit Gewinnen ins Wochenende, getragen von Technologie- und Rüstungswerten wie Rheinmetall. Pharma-Schwergewichte bremsen den SMI, die Commerzbank verliert. Die Wall Street eröffnet rund 0,8 Prozent höher und handelt heute verkürzt.",
+  "tags": [
+    "Börse",
+    "SMI",
+    "DAX",
+    "Rheinmetall",
+    "Commerzbank",
+    "Wall Street",
+    "Black Friday"
+  ]
+}
