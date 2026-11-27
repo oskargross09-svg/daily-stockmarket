@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-27",
+  "edition": "24",
+  "mood": "up",
+  "ticker": [
+    ["Dow Jones", "50 774,9", 1.18],
+    ["S&P 500", "7 297,5", 1.6],
+    ["Nasdaq", "24 129,5", 2.31],
+    ["Gold", "3 646,96 $", 2.23],
+    ["Brent", "95,40 $", -1.21],
+    ["Bitcoin", "59 925,42 $", -1.4],
+    ["EUR/CHF", "0,9144", -0.1]
+  ],
+  "say": {
+    "Wall Street": "Wol Striet",
+    "Dow Jones": "Dau Dschouns",
+    "Nasdaq": "Nasdäk",
+    "S&P 500": "S und P fünfhundert",
+    "Anthropic": "Änthropik",
+    "Black Friday": "Bläck Fraidei",
+    "Fed": "Fedd",
+    "Nvidia": "Envidia"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "Wall Street schliesst *deutlich* höher",
+      "source": "**Nasdaq, Dow Jones** · Schluss Fr, 13:00 Uhr Ortszeit",
+      "lines": [
+        {"cap": "Die Wall Street beendet den verkürzten Handel am Black Friday mit kräftigen Gewinnen."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 2.3, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**Nasdaq Composite** · Schluss Fr"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Dow über *50 700* Punkten",
+      "source": "**NYSE, Nasdaq, dpa-AFX** · Schluss Fr, 13:00 Uhr Ortszeit",
+      "lines": [
+        {"cap": "Der Dow Jones schliesst 1,2 Prozent höher bei 50 775 Punkten.",
+         "tts": "Der Dow Jones schliesst eins Komma zwei Prozent höher, bei fünfzigtausendsiebenhundertfünfundsiebzig Punkten."},
+        {"cap": "Der S&P 500 gewinnt 1,6 Prozent, der Nasdaq Composite 2,3 Prozent.",
+         "tts": "Der S&P 500 gewinnt eins Komma sechs Prozent, der Nasdaq Composite zwei Komma drei Prozent."},
+        {"cap": "Gefragt sind Technologie- und Chipwerte.",
+         "tts": "Gefragt sind Technologie- und Tschip-Werte."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Dow Jones", "sub": "Dow Jones Industrial Average", "from": 50182.95, "to": 50774.94, "dec": 1, "pct": 1.18, "abs": 591.99},
+        {"kind": "bars", "at": 1, "title": "New York · Fr", "rows": [["Dow", 1.18], ["S&P 500", 1.6], ["Nasdaq", 2.31]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "*Anthropic* wieder über Ausgabepreis",
+      "source": "**Nasdaq, Dow Jones** · Schluss Fr, 13:00 Uhr Ortszeit",
+      "lines": [
+        {"cap": "Die Aktie von Anthropic steigt um 11 Prozent auf 91,88 Dollar.",
+         "tts": "Die Aktie von Anthropic steigt um elf Prozent, auf einundneunzig Dollar achtundachtzig."},
+        {"cap": "Damit liegt sie wieder über dem Ausgabepreis von 83 Dollar.",
+         "tts": "Damit liegt sie wieder über dem Ausgabepreis von dreiundachtzig Dollar."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Anthropic", "sub": "Aktie · Nasdaq", "from": 82.79, "to": 91.88, "dec": 2, "unit": "$", "pct": 11.0, "abs": 9.09, "absUnit": "$", "absDec": 2}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "Markt erwartet *Zinserhöhung* der Fed",
+      "source": "**CME FedWatch, Dow Jones** · Fr, 27.11., 13:26 Uhr Ortszeit",
+      "lines": [
+        {"cap": "Am Terminmarkt gilt eine Zinserhöhung der US-Notenbank im Dezember als nahezu sicher.",
+         "tts": "Am Terminmarkt gilt eine Zinserhöhung der US-Notenbank im Dezember als nahezu sicher."},
+        {"cap": "Die Rendite zehnjähriger US-Staatsanleihen steigt auf 4,94 Prozent.",
+         "tts": "Die Rendite zehnjähriger US-Staatsanleihen steigt auf vier Komma neun vier Prozent."},
+        {"cap": "Gold legt 2,2 Prozent zu, Brent-Öl verliert 1,2 Prozent.",
+         "tts": "Gold legt zwei Komma zwei Prozent zu, Brent-Öl verliert eins Komma zwei Prozent."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 1, "value": 4.94, "dec": 2, "unit": "%", "sign": false, "color": "ink", "label": "**Rendite 10 J.** · US-Staatsanleihen"},
+        {"kind": "bars", "at": 2, "title": "Rohstoffe", "rows": [["Gold", 2.23], ["Brent", -1.21]]}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Fazit: Beste *Woche* seit 2022",
+      "source": "**dpa-AFX, NYSE** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {"cap": "Fazit: Der Dow Jones gewinnt in dieser Woche 5,5 Prozent, so viel wie seit Oktober 2022 nicht mehr.",
+         "tts": "Fazit: Der Dow Jones gewinnt in dieser Woche fünf Komma fünf Prozent, so viel wie seit Oktober zweitausendzweiundzwanzig nicht mehr."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 5.5, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**Dow Jones** · Woche"}
+      ]
+    }
+  ],
+  "title": "Wall Street mit Wochenplus, Anthropic über Ausgabepreis | Börse in der Nacht 27.11.",
+  "description": "Die Wall Street schliesst den verkürzten Black-Friday-Handel deutlich höher, der Dow Jones verbucht das grösste Wochenplus seit Oktober 2022. Die Aktie von Anthropic steigt um 11 Prozent und liegt wieder über dem Ausgabepreis. Am Terminmarkt gilt eine Zinserhöhung der Fed im Dezember als nahezu sicher.",
+  "tags": ["Börse", "Wall Street", "Dow Jones", "Nasdaq", "Anthropic", "Fed", "Zinsen"]
+}
