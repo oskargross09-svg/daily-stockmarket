@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-28",
+  "edition": "18",
+  "mood": "up",
+  "ticker": [
+    ["S&P 500", "7 297,5", 1.6],
+    ["Nasdaq", "24 129,5", 2.31],
+    ["Dow Jones", "50 774,9", 1.18],
+    ["SMI", "14 880,0", 0.42],
+    ["DAX", "25 441,2", 0.9],
+    ["Gold", "3 653,00 $", 2.45],
+    ["Bitcoin", "59 565 $", -3.4],
+    ["EUR/CHF", "0,9144", -0.1]
+  ],
+  "say": {
+    "Wall Street": "Wol Striet",
+    "Dow Jones": "Dau Dschouns",
+    "Nasdaq": "Nasdäk",
+    "S&P 500": "S und P fünfhundert",
+    "KI": "K I",
+    "Caterpillar": "Katerpiller",
+    "Cisco": "Sisko",
+    "Amazon": "Ämäson",
+    "Procter & Gamble": "Procter änd Gämbel",
+    "McDonald's": "Mäkdonalds",
+    "Coca-Cola": "Coca-Cola"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "S&P 500 mit *bester Woche* seit April 2025",
+      "source": "**AP** · Schluss Fr, 27.11., 19:00 Uhr",
+      "lines": [
+        {"cap": "Guten Abend. Der S&P 500 gewinnt in dieser Woche 5,6 Prozent, so viel wie seit April 2025 nicht mehr.",
+         "tts": "Guten Abend. Der S&P 500 gewinnt in dieser Woche fünf Komma sechs Prozent, so viel wie seit April zweitausendfünfundzwanzig nicht mehr."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 5.6, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**S&P 500** · Woche bis Fr, 27.11."}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "Dow Jones schliesst bei *50 775* Punkten",
+      "source": "**NYSE, Nasdaq, AP** · Schluss Fr, 19:00 Uhr",
+      "lines": [
+        {"cap": "Der Dow Jones schliesst am Freitag 1,2 Prozent höher bei 50 775 Punkten.",
+         "tts": "Der Dow Jones schliesst am Freitag eins Komma zwei Prozent höher, bei fünfzigtausendsiebenhundertfünfundsiebzig Punkten."},
+        {"cap": "Der Nasdaq Composite steigt um 2,3 Prozent, angeführt von Chip- und KI-Werten.",
+         "tts": "Der Nasdaq Composite steigt um zwei Komma drei Prozent, angeführt von Chip- und KI-Werten."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "Dow Jones", "sub": "Dow Jones Industrial Average", "from": 50182.95, "to": 50774.94, "dec": 1, "pct": 1.18, "abs": 591.99},
+        {"kind": "bars", "at": 1, "title": "Schluss Fr", "rows": [["Dow Jones", 1.18], ["S&P 500", 1.60], ["Nasdaq", 2.31]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "*Amazon* und Caterpillar gefragt",
+      "source": "**NYSE, Nasdaq** · Schluss Fr, 19:00 Uhr",
+      "lines": [
+        {"cap": "Amazon steigt um 4,0 Prozent, Caterpillar um 3,3 und Cisco um 3,0 Prozent.",
+         "tts": "Amazon steigt um vier Prozent, Caterpillar um drei Komma drei und Cisco um drei Prozent."},
+        {"cap": "McDonald's, Procter & Gamble und Coca-Cola schliessen leicht tiefer.",
+         "tts": "McDonald's, Procter & Gamble und Coca-Cola schliessen leicht tiefer."}
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "Gewinner · Fr", "rows": [["Amazon", 3.96], ["Caterpillar", 3.32], ["Cisco", 3.01]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "flat",
+      "headline": "US-Rendite steigt auf *4,94 %*",
+      "source": "**CNBC** · 10-jährige US-Staatsanleihe, Fr, 27.11.",
+      "lines": [
+        {"cap": "Die Rendite zehnjähriger US-Staatsanleihen steigt um 8,8 Basispunkte auf 4,94 Prozent.",
+         "tts": "Die Rendite zehnjähriger U S Staatsanleihen steigt um acht Komma acht Basispunkte, auf vier Komma neun vier Prozent."},
+        {"cap": "Am 8. und 9. Dezember entscheidet die US-Notenbank über den Leitzins.",
+         "tts": "Am achten und neunten Dezember entscheidet die U S Notenbank über den Leitzins."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 4.94, "dec": 2, "unit": "%", "sign": false, "color": "ink", "label": "**10-jährige US-Rendite** · Fr, 27.11."}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Fazit: Freitag folgt der *US-Arbeitsmarkt*",
+      "source": "**AP, CNBC** · Woche bis Fr, 27.11.",
+      "lines": [
+        {"cap": "Fazit: Der Dow Jones gewinnt 5,5 Prozent in der Woche. Am Freitag folgt der letzte US-Arbeitsmarktbericht vor dem Zinsentscheid.",
+         "tts": "Fazit: Der Dow Jones gewinnt fünf Komma fünf Prozent in der Woche. Am Freitag folgt der letzte U S Arbeitsmarktbericht vor dem Zinsentscheid."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 5.5, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**Dow Jones** · Woche bis Fr, 27.11."}
+      ]
+    }
+  ],
+  "title": "Wall Street mit bester Woche seit April 2025, Nasdaq +2,3 % | Börse am Abend 28.11.",
+  "description": "Der S&P 500 gewinnt in der verkürzten Thanksgiving-Woche 5,6 Prozent, so viel wie seit April 2025 nicht mehr; der Dow Jones schliesst am Freitag bei 50 775 Punkten. Die zehnjährige US-Rendite steigt auf 4,94 Prozent, am 8. und 9. Dezember entscheidet die US-Notenbank über den Leitzins.",
+  "tags": ["Börse", "Wall Street", "Dow Jones", "S&P 500", "Nasdaq", "Fed", "Zinsen"]
+}
