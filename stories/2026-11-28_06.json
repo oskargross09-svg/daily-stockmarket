@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-28",
+  "edition": "06",
+  "mood": "up",
+  "ticker": [
+    ["SMI", "14 880,0", 0.42],
+    ["DAX", "25 441,2", 0.9],
+    ["Dow Jones", "50 774,9", 1.18],
+    ["Gold", "3 653,00 $", 2.45],
+    ["Brent", "95,44 $", -1.2],
+    ["Bitcoin", "59 729,30 $", -1.75],
+    ["EUR/CHF", "0,9144", -0.1],
+    ["USD/CHF", "0,8361", 0.2]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "DAX": "Dax",
+    "Dow Jones": "Dau Dschouns",
+    "OPEC+": "Opeck plus",
+    "AHV": "A H V",
+    "Logitech": "Lodschitek",
+    "Nestlé": "Nestle",
+    "Fed": "Fedd"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "up",
+      "headline": "SMI mit *Wochenplus* von 2,1 %",
+      "source": "**SIX** · Wochenbilanz, Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {"cap": "Guten Morgen. Europas Börsen gehen nach einer Erholungswoche mit Gewinnen ins Wochenende.",
+         "tts": "Guten Morgen. Europas Börsen gehen nach einer Erholungswoche mit Gewinnen ins Wochenende."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 2.1, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**SMI** · Woche bis Schluss Fr"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "SMI schliesst bei *14 880* Punkten",
+      "source": "**SIX, ad-hoc-news** · Schluss Fr, 17:30 Uhr",
+      "lines": [
+        {"cap": "Der SMI schliesst am Freitag 0,4 Prozent höher bei 14 880 Punkten.",
+         "tts": "Der S M I schliesst am Freitag null Komma vier Prozent höher, bei vierzehntausendachthundertachtzig Punkten."},
+        {"cap": "Logitech führt mit einem Plus von 3,9 Prozent.",
+         "tts": "Logitech führt mit einem Plus von drei Komma neun Prozent."},
+        {"cap": "Swiss Re und Nestlé schliessen leicht tiefer.",
+         "tts": "Swiss Re und Nestlé schliessen leicht tiefer."}
+      ],
+      "objects": [
+        {"kind": "quote", "at": 0, "name": "SMI", "sub": "Swiss Market Index", "from": 14817.68, "to": 14879.97, "dec": 1, "pct": 0.42, "abs": 62.29}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "up",
+      "headline": "DAX gewinnt *2,6 %* in der Woche",
+      "source": "**Xetra, dpa-AFX** · Wochenbilanz, Schluss Fr",
+      "lines": [
+        {"cap": "Der DAX steigt am Freitag um 0,9 Prozent auf 25 441 Punkte.",
+         "tts": "Der Dax steigt am Freitag um null Komma neun Prozent, auf fünfundzwanzigtausendvierhunderteinundvierzig Punkte."},
+        {"cap": "Auf Wochensicht gewinnt er 2,6 Prozent, gefragt sind Rüstungs- und Chipwerte.",
+         "tts": "Auf Wochensicht gewinnt er zwei Komma sechs Prozent. Gefragt sind Rüstungs- und Tschip-Werte."}
+      ],
+      "objects": [
+        {"kind": "bars", "at": 0, "title": "Wochenbilanz · Schluss Fr", "rows": [["SMI", 2.11], ["DAX", 2.6], ["Dow Jones", 5.5]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "Abstimmung und *OPEC+* am Sonntag",
+      "source": "**SRF, Reuters** · Sa, 28.11.",
+      "lines": [
+        {"cap": "Am Sonntag stimmt die Schweiz unter anderem über die Finanzierung der 13. AHV-Rente ab.",
+         "tts": "Am Sonntag stimmt die Schweiz unter anderem über die Finanzierung der dreizehnten A H V Rente ab."},
+        {"cap": "Gleichentags beraten die Ölförderländer der OPEC+ über ihre Förderziele.",
+         "tts": "Gleichentags beraten die Ölförderländer der Opeck plus über ihre Förderziele."},
+        {"cap": "Brent-Öl schliesst am Freitag bei 95,44 Dollar.",
+         "tts": "Brent-Öl schliesst am Freitag bei fünfundneunzig Dollar vierundvierzig."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 2, "value": 95.44, "dec": 2, "unit": "$", "sign": false, "color": "ink", "label": "**Brent** · Schluss Fr"}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "up",
+      "headline": "Fazit: Blick auf *Teuerung* und Jobs",
+      "source": "**Dow Jones, dpa-AFX** · Terminkalender 30.11.–4.12.",
+      "lines": [
+        {"cap": "Fazit: In der neuen Woche folgen am Mittwoch die Schweizer Teuerung und am Freitag der US-Arbeitsmarktbericht.",
+         "tts": "Fazit: In der neuen Woche folgen am Mittwoch die Schweizer Teuerung, und am Freitag der U S Arbeitsmarktbericht."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 2.6, "dec": 1, "unit": "%", "sign": true, "color": "up", "label": "**DAX** · Woche bis Schluss Fr"}
+      ]
+    }
+  ],
+  "title": "SMI und DAX mit Wochenplus, Abstimmung und OPEC+ am Sonntag | Börse am Morgen 28.11.",
+  "description": "Der SMI schliesst die Woche 2,1 Prozent höher, der DAX gewinnt 2,6 Prozent. Am Sonntag stimmt die Schweiz über die Finanzierung der 13. AHV-Rente ab, gleichentags berät die OPEC+ über ihre Förderziele. In der neuen Woche folgen die Schweizer Teuerung und der US-Arbeitsmarktbericht.",
+  "tags": ["Börse", "SMI", "DAX", "Wochenbilanz", "OPEC", "AHV", "Abstimmung"]
+}
