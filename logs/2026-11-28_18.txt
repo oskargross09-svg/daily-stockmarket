@@ -1,0 +1,7 @@
+job: videos/2026-11-28_18.json
+run: 20261128T163837
+Fertig: https://youtu.be/n3NnCg_u-34
+Status: private
+VIDEO_ID=n3NnCg_u-34
+Veröffentlichung geplant: 2026-11-28T17:00:00Z
+rc=0
