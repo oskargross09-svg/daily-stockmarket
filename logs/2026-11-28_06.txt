@@ -1,0 +1,7 @@
+job: videos/2026-11-28_06.json
+run: 20261128T042548
+Fertig: https://youtu.be/59QWANUbDfA
+Status: private
+VIDEO_ID=59QWANUbDfA
+Veröffentlichung geplant: 2026-11-28T05:00:00Z
+rc=0
