@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-28",
+  "edition": "12",
+  "mood": "down",
+  "ticker": [
+    ["Bitcoin", "59 565 $", -3.4],
+    ["Ether", "1 652 $", -4.4],
+    ["SMI", "14 880,0", 0.42],
+    ["DAX", "25 441,2", 0.9],
+    ["Dow Jones", "50 774,9", 1.18],
+    ["Gold", "3 653,00 $", 2.45],
+    ["Brent", "95,44 $", -1.2],
+    ["EUR/CHF", "0,9144", -0.1]
+  ],
+  "say": {
+    "SMI": "S M I",
+    "BIP": "B I P",
+    "ETF": "E T F",
+    "Ether": "Ieter",
+    "Section": "Sekschen",
+    "Dow Jones": "Dau Dschouns"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "dir": "down",
+      "headline": "Bitcoin fällt *3,4 %* in 24 Stunden",
+      "source": "**CoinGecko** · Sa, 09:40 Uhr",
+      "lines": [
+        {"cap": "Guten Tag. Bitcoin gerät am Samstagvormittag erneut unter Druck.",
+         "tts": "Guten Tag. Bitcoin gerät am Samstagvormittag erneut unter Druck."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": -3.4, "dec": 1, "unit": "%", "sign": true, "color": "down", "label": "**Bitcoin** · 24 Std., Sa 09:40 Uhr"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Bitcoin bei *59 565 Dollar*",
+      "source": "**CoinGecko, finanzen.net** · Sa, 09:40 Uhr",
+      "lines": [
+        {"cap": "Bitcoin notiert bei 59 565 Dollar, 3,4 Prozent tiefer als vor 24 Stunden.",
+         "tts": "Bitcoin notiert bei neunundfünfzigtausendfünfhundertfünfundsechzig Dollar, drei Komma vier Prozent tiefer als vor vierundzwanzig Stunden."},
+        {"cap": "Ether verliert 4,4 Prozent auf 1652 Dollar.",
+         "tts": "Ether verliert vier Komma vier Prozent, auf tausendsechshundertzweiundfünfzig Dollar."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 0, "value": 59565, "dec": 0, "unit": "$", "sign": false, "color": "ink", "label": "**Bitcoin** · Sa, 09:40 Uhr"},
+        {"kind": "bars", "at": 1, "title": "Krypto · 24 Std.", "rows": [["Bitcoin", -3.4], ["Ether", -4.4]]}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "down",
+      "headline": "Achter *Abflusstag* bei Bitcoin-ETF",
+      "source": "**SoSoValue** · Fr, 27.11.",
+      "lines": [
+        {"cap": "Aus US-Bitcoin-ETF fliessen am Freitag netto 389 Millionen Dollar ab.",
+         "tts": "Aus U S Bitcoin-E T F fliessen am Freitag netto dreihundertneunundachtzig Millionen Dollar ab."},
+        {"cap": "Es ist der achte Abflusstag in Folge.",
+         "tts": "Es ist der achte Abflusstag in Folge."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 389, "dec": 0, "unit": " Mio. $", "sign": false, "color": "down", "label": "**Bitcoin-ETF** · Nettoabfluss Fr"}
+      ]
+    },
+    {
+      "type": "news",
+      "dir": "politik",
+      "headline": "USA: bis *15 %* Zoll auf Schweizer Waren",
+      "source": "**USTR, AWP, Reuters** · Mi, 25.11.",
+      "lines": [
+        {"cap": "Die US-Handelsbehörde schlägt für Schweizer Waren Zusatzzölle von bis zu 15 Prozent vor.",
+         "tts": "Die US-Handelsbehörde schlägt für Schweizer Waren Zusatzzölle von bis zu fünfzehn Prozent vor."},
+        {"cap": "Hält sie die Zusagen der Schweiz für ungenügend, wären es bis zu 20 Prozent.",
+         "tts": "Hält sie die Zusagen der Schweiz für ungenügend, wären es bis zu zwanzig Prozent."},
+        {"cap": "Der Bund erwartet, dass die vereinbarte Obergrenze von 15 Prozent gilt.",
+         "tts": "Der Bund erwartet, dass die vereinbarte Obergrenze von fünfzehn Prozent gilt."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "at": 0, "value": 15, "dec": 0, "unit": "%", "sign": false, "color": "ink", "label": "**Vorschlag USTR** · Schweiz"},
+        {"kind": "kennzahl", "at": 1, "value": 20, "dec": 0, "unit": "%", "sign": false, "color": "down", "label": "**Bei ungenügenden Zusagen** · Schweiz"}
+      ]
+    },
+    {
+      "type": "fazit",
+      "dir": "flat",
+      "headline": "Fazit: Montag folgt das *Schweizer BIP*",
+      "source": "**Dow Jones Newswires** · Terminkalender Mo, 30.11.",
+      "lines": [
+        {"cap": "Fazit: Krypto bleibt unter Druck. Am Montag um 9 Uhr folgt das Schweizer BIP, um 14 Uhr die deutsche Teuerung.",
+         "tts": "Fazit: Krypto bleibt unter Druck. Am Montag um neun Uhr folgt das Schweizer B I P, um vierzehn Uhr die deutsche Teuerung."}
+      ],
+      "objects": [
+        {"kind": "kennzahl", "value": 9, "dec": 0, "unit": " Uhr", "sign": false, "color": "ink", "label": "**Schweizer BIP** · 3. Quartal, Mo"}
+      ]
+    }
+  ],
+  "title": "Bitcoin unter Druck, USA schlagen Schweiz bis 15 % Zoll vor | Börse am Mittag 28.11.",
+  "description": "Bitcoin fällt am Samstag innert 24 Stunden um 3,4 Prozent auf 59 565 Dollar, aus US-Bitcoin-ETF fliesst den achten Tag in Folge Geld ab. Die US-Handelsbehörde schlägt für Schweizer Waren Zusatzzölle von bis zu 15 Prozent vor, der Bund pocht auf die vereinbarte Obergrenze. Am Montag folgen das Schweizer BIP und die deutsche Teuerung.",
+  "tags": ["Börse", "Bitcoin", "Krypto", "ETF", "Zölle", "Schweiz", "USTR"]
+}
